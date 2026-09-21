@@ -10,7 +10,22 @@ Plain static HTML/CSS/JS, no build step.
   previous renders; `comparison-iteration-1-vs-2.png` is the before/after; `_tools/` holds the wrapper pages used for the
   automated checks and `linkcheck.txt`
 
-## Open the preview
+## Review URL
+
+<https://tobiasnoyes77.github.io/un-lugar-preview/> — GitHub Pages, built from the public repo `tobiasnoyes77/un-lugar-preview`
+(this folder is its working copy; `_screenshots/` is git-ignored). Unlisted and `noindex`, but not access-controlled.
+
+To publish an update (use the Command Line Tools git — `/usr/bin/git` is blocked by the Xcode licence on this Mac):
+
+```
+cd site
+export PATH=/Library/Developer/CommandLineTools/usr/bin:$PATH
+git add -A && git commit -m "describe the change" && git push
+```
+
+The page is live about 30 s after the push. To take the preview down: `gh repo delete tobiasnoyes77/un-lugar-preview`.
+
+## Open the preview locally
 
 ```
 cd site
