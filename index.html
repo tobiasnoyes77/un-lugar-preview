@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fundación Un Lugar – Salud mental para niños, niñas y jóvenes en Bogotá</title>
-  <meta name="description" content="Promovemos la salud mental de niños, niñas y jóvenes en Kennedy – Patio Bonito, Bogotá, con formación, atención psicosocial y seguridad alimentaria. Apadrina a un niño por $45.000 al mes.">
+  <meta name="description" content="Un lugar para crecer con salud mental. Acompañamos a niños, niñas y adolescentes de Kennedy – Patio Bonito, en Bogotá, con formación, atención psicosocial y alimentación. Apadrina a un niño por $45.000 al mes.">
   <!-- Canonical placeholder: replace with the final URL when the rebuilt homepage is published. Preview is private and must not be indexed. -->
   <link rel="canonical" href="https://fundacionunlugar.com/">
   <meta name="robots" content="noindex, nofollow">
@@ -12,12 +12,12 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CO">
   <meta property="og:site_name" content="Fundación Un Lugar">
-  <meta property="og:title" content="Fundación Un Lugar – Salud mental para niños, niñas y jóvenes en Bogotá">
-  <meta property="og:description" content="Prevenimos la depresión y el suicidio en Kennedy – Patio Bonito con formación, atención psicosocial y seguridad alimentaria.">
+  <meta property="og:title" content="Fundación Un Lugar – Un lugar para crecer con salud mental">
+  <meta property="og:description" content="Acompañamos a niños, niñas y adolescentes de Patio Bonito, y a sus familias, para prevenir la depresión y el suicidio.">
   <meta property="og:url" content="https://fundacionunlugar.com/">
   <meta property="og:image" content="assets/photos/WhatsApp-Image-2024-08-02-at-1.06.40-PM.jpeg">
   <meta property="og:image:alt" content="Un grupo de niños y niñas con camisetas verdes de la fundación sonríe y se abraza durante una jornada al aire libre.">
-  <meta name="theme-color" content="#EEF4FC">
+  <meta name="theme-color" content="#FFFFFF">
   <!-- No favicon exists yet (brand guide §2, determine); the empty data URL avoids a 404 request. -->
   <link rel="icon" href="data:,">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,9 +32,7 @@
   <!-- Preview notice: remove at publication -->
   <div class="preview-bar" role="note" aria-label="Aviso de vista previa">
     <div class="container">
-      <span><strong>Vista previa privada</strong> · 20 de septiembre de 2026 · iteración 2</span>
-      <span>Los elementos marcados <span class="badge badge--verify">por confirmar</span> esperan verificación de la fundación.</span>
-      <a href="#pendientes">Ver la lista de pendientes</a>
+      <p><strong>Vista previa privada</strong> · iteración 3 · 24 de septiembre de 2026. Lo marcado <span class="badge badge--verify">por confirmar</span> espera verificación de la fundación. <a href="#pendientes">Ver pendientes</a></p>
     </div>
   </div>
 
@@ -43,6 +41,7 @@
        Educarte inside "Nuestro trabajo" and footer (guide §10, adopted).
        Group landings (/quienes-somos/, /nuestro-trabajo/) do not exist yet,
        so the two group items are disclosure buttons, not links.
+       Iteration 3: the header sticks to the top so "Dona" stays in reach.
        =================================================================== -->
   <header class="site-header">
     <div class="container">
@@ -100,28 +99,33 @@
   <main id="contenido">
 
     <!-- =================================================================
-         1. Hero — mission and primary action
-         Copy: DECISIONS.md 2026-09-20 (ten-second message, §3); amount from
-         inventory/content/apadrinar.md ("1.500 diarios, $45.000 mensuales").
+         1. Hero — the promise (brand/HOMEPAGE_COPY_v3.md §4.1; DECISIONS 2026-09-24)
+         Headline built on the foundation's name ("un lugar donde puedes crecer");
+         lead from mision-y-vision.md and nuestro-objetivo.md; amount from apadrinar.md.
          Photo: inventory/assets/photos/WhatsApp-Image-2024-08-02-at-1.06.40-PM.jpeg
-         (current homepage) — consent pending. Owner's choice on 2026-09-20 (was IMG_1929
-         in the first iteration-2 build, IMG_3350 in iteration 1). Source is 1280 px wide.
-         The splash SVG is an original shape in blue-600 (Brand Guide §7, one per page).
+         (current homepage, owner's choice 2026-09-20) — consent pending; source is 1280 px.
+         Paint splash (Brand Guide §7, one per page): the SVG is the fallback; js/splash3d.js
+         replaces it with a moving 3D blob ("la mancha viva") once WebGL has drawn a frame.
          ================================================================= -->
-    <section class="section hero" id="inicio" aria-labelledby="hero-title">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="container hero__grid">
         <div class="hero__content">
-          <span class="eyebrow">Fundación Un Lugar · Kennedy – Patio Bonito, Bogotá</span>
-          <h1 class="hero__title" id="hero-title">Promovemos la <span class="hl">salud mental</span> de niños, niñas y jóvenes en Bogotá.</h1>
-          <p class="hero__lead">Prevenimos la depresión y el suicidio en Kennedy – Patio Bonito con formación, atención psicosocial y seguridad alimentaria.</p>
+          <p class="eyebrow"><span><span class="eyebrow__org">Fundación Un Lugar · </span>Kennedy – Patio Bonito, Bogotá</span></p>
+          <h1 class="hero__title" id="hero-title">Un lugar para crecer con <span class="hl">salud mental</span>.</h1>
+          <p class="hero__lead">Acompañamos a niños, niñas y adolescentes de Patio Bonito, y a sus familias, para prevenir la depresión y el suicidio. Lo hacemos con formación, atención psicosocial y alimentación.</p>
           <div class="hero__actions">
-            <a class="btn btn--donate" href="https://fundacionunlugar.com/apadrinar/">Apadrina a un niño · $45.000 al mes</a>
+            <a class="btn btn--donate btn--lg" href="https://fundacionunlugar.com/apadrinar/">Apadrina a un niño · $45.000 al mes</a>
             <a class="link-arrow" href="https://fundacionunlugar.com/dona/">Haz una donación única</a>
           </div>
-          <p class="hero__note small text-muted badge-note">
-            <span>Equivale a $1.500 al día. Pago en línea seguro.</span>
-            <span class="badge badge--verify">monto por confirmar</span>
-          </p>
+          <p class="hero__note"><span>Equivale a $1.500 al día. Pago en línea seguro.</span> <span class="badge badge--verify">monto por confirmar</span></p>
+          <div class="hero__paths">
+            <p class="hero__paths-label">¿Buscas otra cosa?</p>
+            <ul role="list">
+              <li><a class="link-arrow" href="https://fundacionunlugar.com/inscribete-programas/">Inscribir a mi hijo o hija</a></li>
+              <li><a class="link-arrow" href="https://fundacionunlugar.com/voluntariado/">Ser voluntario</a></li>
+              <li><a class="link-arrow" href="https://fundacionunlugar.com/patrocinar-causas/">Patrocinar como empresa</a></li>
+            </ul>
+          </div>
         </div>
         <div class="hero__visual">
           <svg class="splash" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
@@ -134,7 +138,7 @@
           <figure class="hero__media">
             <img src="assets/photos/WhatsApp-Image-2024-08-02-at-1.06.40-PM.jpeg"
                  srcset="assets/photos/WhatsApp-Image-2024-08-02-at-1.06.40-PM-w800.jpeg 800w, assets/photos/WhatsApp-Image-2024-08-02-at-1.06.40-PM.jpeg 1280w"
-                 sizes="(min-width: 64em) 45vw, 100vw"
+                 sizes="(min-width: 64em) 40vw, 92vw"
                  width="1280" height="960"
                  alt="Un grupo de niños y niñas con camisetas verdes de la fundación sonríe y se abraza durante una jornada al aire libre, con voluntarios detrás."
                  fetchpriority="high">
@@ -145,245 +149,195 @@
     </section>
 
     <!-- =================================================================
-         2. Secondary actions — families, volunteers, companies
-         Copy: inscribete-programas.md (sábados, 9–18 años), voluntariado.md
-         (requisitos), patrocinar-causas.md ($300.000 al mes, informe trimestral).
-         ================================================================= -->
-    <section class="section section--tight section--alt" aria-labelledby="paths-title">
-      <div class="container">
-        <h2 class="visually-hidden" id="paths-title">Otras formas de llegar a la fundación</h2>
-        <div class="grid grid--3-md">
-          <article class="card card--action">
-            <div class="card__body">
-              <svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
-              <h3>Inscribe a tu hijo o hija</h3>
-              <p>Clases de fútbol, danza y arte los sábados para niños, niñas y adolescentes de 9 a 18 años. <span class="badge badge--verify">horario por confirmar</span></p>
-              <div class="card__actions">
-                <a class="btn btn--secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSeCDr8CuEnLXbuR0zRH3iXmYmvRIH39ScYODW0EZLhKXya0WQ/viewform" target="_blank" rel="noopener">Inscríbete<span class="visually-hidden"> (formulario de Google, se abre en una pestaña nueva)</span></a>
-                <a class="link-arrow" href="https://fundacionunlugar.com/inscribete-programas/">Ver horarios</a>
-              </div>
-            </div>
-          </article>
-          <article class="card card--action">
-            <div class="card__body">
-              <svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              <h3>Sé voluntario</h3>
-              <p>Aporta tu tiempo y tu talento los fines de semana en Patio Bonito. Debes ser mayor de edad y contar con seguro médico.</p>
-              <div class="card__actions">
-                <a class="btn btn--secondary" href="https://fundacionunlugar.com/voluntariado/">Quiero ser voluntario</a>
-              </div>
-            </div>
-          </article>
-          <article class="card card--action">
-            <div class="card__body">
-              <svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
-              <h3>Patrocina una causa</h3>
-              <p>Si tienes una empresa, patrocina uno de nuestros programas con $300.000 al mes y recibe un informe trimestral de impacto. <span class="badge badge--verify">monto por confirmar</span></p>
-              <div class="card__actions">
-                <a class="btn btn--secondary" href="https://fundacionunlugar.com/patrocinar-causas/">Patrocinar un programa</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- =================================================================
-         3. Our model in three components
-         Copy: nuestro-objetivo.md (three components; "¿Cómo abordamos…?" list),
-         programas-08.md (eligibility), voluntariado.md (Kennedy, Patio Bonito).
+         2. Lo que protege a un niño — why and what (COPY_v3 §4.2)
+         Three protective factors = the three components; wording from
+         nuestro-objetivo.md (rationale), abrigarte.md, alimentarte.md.
+         Help line: Línea 106 / 123, Secretaría Distrital de Salud (checked 2026-09-24).
          Photo: photos/IMG_3829-scaled.jpeg — hands only, no identifiable child.
+         ⚑ Wording pending review by the psychosocial lead.
          ================================================================= -->
-    <section class="section" id="como-trabajamos" aria-labelledby="model-title">
-      <div class="container model__grid">
-        <div>
-          <div class="section-head">
-            <span class="eyebrow">Cómo trabajamos</span>
-            <h2 id="model-title">Una estrategia integral en tres componentes</h2>
-            <p>Trabajamos con niños, niñas y adolescentes en situación de vulnerabilidad económica, y con sus familias, en la localidad de Kennedy, barrio Patio Bonito.</p>
-          </div>
-          <div class="pillars">
-            <div class="pillar">
-              <span class="pillar__num" aria-hidden="true">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-              </span>
-              <div>
-                <h3>Formación y educación</h3>
-                <p>Desarrollamos programas de formación deportiva y artística y acompañamos a cada niño y joven en su proyecto de vida.</p>
-              </div>
-            </div>
-            <div class="pillar">
-              <span class="pillar__num" aria-hidden="true">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-              </span>
-              <div>
-                <h3>Atención psicosocial</h3>
-                <p>Brindamos atención psicosocial e integral para la prevención del suicidio y la depresión.</p>
-              </div>
-            </div>
-            <div class="pillar">
-              <span class="pillar__num" aria-hidden="true">
-                <svg class="icon" viewBox="0 0 24 24"><path d="m5 11 4-7"/><path d="m19 11-4-7"/><path d="M2 11h20"/><path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4"/><path d="m9 11 1 9"/><path d="M4.5 15.5h15"/><path d="m15 11-1 9"/></svg>
-              </span>
-              <div>
-                <h3>Seguridad alimentaria y humanitaria</h3>
-                <p>Proporcionamos seguridad alimentaria y reforzamos la canasta familiar de los niños y sus familias.</p>
-              </div>
-            </div>
-          </div>
-          <p class="section-foot"><a class="link-arrow" href="https://fundacionunlugar.com/nuestro-objetivo/">Conoce nuestro objetivo</a></p>
+    <section class="section section--alt" id="como-trabajamos" aria-labelledby="protege-title">
+      <div class="container protege">
+        <div class="protege__head reveal">
+          <p class="eyebrow">Cómo trabajamos</p>
+          <h2 id="protege-title">Lo que protege a un niño</h2>
+          <p class="lead">Un propósito, alguien que lo escuche y comida en la mesa. Esas tres cosas cuidan la salud mental de un niño, y sobre ellas construimos nuestro trabajo.</p>
+          <p class="protege__link"><a class="link-arrow" href="https://fundacionunlugar.com/nuestro-objetivo/">Conoce nuestro objetivo</a></p>
         </div>
-        <figure class="model__media">
+        <figure class="protege__media reveal">
           <img src="assets/photos/IMG_3829-scaled.jpeg"
                srcset="assets/photos/IMG_3829-scaled-w600.jpeg 600w, assets/photos/IMG_3829-scaled.jpeg 1000w"
-               sizes="(min-width: 64em) 35vw, 100vw"
+               sizes="(min-width: 64em) 36vw, 92vw"
                width="1000" height="1778" loading="lazy"
                alt="Las manos de un niño estampan huellas de pintura azul y amarilla sobre papel en un taller de arte de la fundación.">
           <figcaption>Taller de arte. Los sábados, la formación artística y deportiva es parte del programa Formarte.</figcaption>
         </figure>
+        <div class="protege__body">
+          <ol class="factors" role="list">
+            <li class="factor reveal">
+              <p class="factor__label"><span class="factor__num">01</span> Formación y educación</p>
+              <h3>Un propósito</h3>
+              <p>Cuando un niño no ve un camino hacia adelante, puede sentir desesperanza y vacío. Por eso ofrecemos formación deportiva y artística, y acompañamos a los jóvenes en la construcción de su proyecto de vida.</p>
+            </li>
+            <li class="factor reveal">
+              <p class="factor__label"><span class="factor__num">02</span> Atención psicosocial</p>
+              <h3>Alguien que lo escuche</h3>
+              <p>Sentirse escuchado fortalece las redes de apoyo que protegen la salud mental. Por eso brindamos atención psicológica y social, con seguimiento a cada caso y acompañamiento a la familia.</p>
+            </li>
+            <li class="factor reveal">
+              <p class="factor__label"><span class="factor__num">03</span> Seguridad alimentaria y humanitaria</p>
+              <h3>Comida en la mesa</h3>
+              <p>Cuando falta la comida, crecen las tensiones en casa. Por eso reforzamos cada semana la canasta familiar de los hogares en riesgo alimentario.</p>
+            </li>
+          </ol>
+          <aside class="helpline reveal" aria-labelledby="helpline-title">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div>
+              <h3 id="helpline-title">¿Necesitas hablar con alguien ahora?</h3>
+              <p>En Bogotá, la Línea 106 escucha gratis a niños, niñas, adolescentes y a quienes los cuidan, las 24 horas.</p>
+              <div class="helpline__actions">
+                <a class="btn btn--primary btn--sm" href="tel:106">Llamar al 106</a>
+                <a class="btn btn--secondary btn--sm" href="https://wa.me/573007548933" target="_blank" rel="noopener">WhatsApp 300 754 8933<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+              </div>
+              <p class="small">En una emergencia, llama al <a href="tel:123">123</a>. <span class="badge badge--verify">texto por confirmar</span></p>
+            </div>
+          </aside>
+        </div>
       </div>
     </section>
 
     <!-- =================================================================
-         4. Programs — six active programs (DECISIONS 2026-09-20, inventory Q1)
-         Names: programas-08.md + one clean name each. One-liners condensed
-         from nuestros-programas.md and the six detail pages. Links go to the
-         existing detail pages. Images: tiles 1-3, 7, 2-3 + IMG_3815 (/abrigarte/) +
-         two daylight photos from the current homepage (WhatsApp-Image-2024-08-02-*).
-         Iteration 2 replaced the dim indoor tiles 9, 10 and 8 — see assets/README.md.
+         3. Seis programas para crecer — how (COPY_v3 §4.3)
+         Six programs (DECISIONS 2026-09-20, Q1); one-liners from the program pages
+         (alimentarte, formate, capacitarte, bienestar-infantil, cuidarte, abrigarte)
+         and nuestros-programas.md. Images unchanged from iteration 2 (assets/README.md).
+         Phones: a horizontal row you can swipe; tablets and desktops: a grid.
          ================================================================= -->
-    <section class="section section--alt" id="programas" aria-labelledby="programs-title">
+    <section class="section" id="programas" aria-labelledby="programs-title">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Nuestros programas</span>
-          <h2 id="programs-title">Seis programas para niños, niñas, jóvenes y sus familias</h2>
-          <p>Para acceder a los programas es necesario ser parte de la comunidad beneficiaria de la fundación: niños y niñas que enfrentan situaciones de vulnerabilidad, así como sus familias.</p>
+        <div class="head-split reveal">
+          <div>
+            <p class="eyebrow">Nuestros programas</p>
+            <h2 id="programs-title">Seis programas para crecer</h2>
+          </div>
+          <p class="lead">Estos seis programas llevan esas tres ideas a la práctica, con los niños y con sus familias.</p>
         </div>
-        <div class="grid grid--3">
-          <article class="card">
-            <figure class="card__media">
-              <img src="assets/program-graphics/1-3.jpg" width="480" height="480" loading="lazy" alt="Una niña sonríe mientras sostiene una caja de alimentos.">
-              <span class="badge badge--consent badge--on-media">consentimiento por confirmar</span>
-            </figure>
-            <div class="card__body">
+        <div class="programs-scroller reveal" data-scroll-label="Programas (desliza para ver más)">
+          <ul class="programs" role="list">
+            <li class="program">
+              <figure class="program__media">
+                <img src="assets/program-graphics/1-3.jpg" width="480" height="480" loading="lazy" alt="Una niña sonríe mientras sostiene una caja de alimentos.">
+                <span class="badge badge--consent badge--on-media">consentimiento por confirmar</span>
+              </figure>
               <h3>Alimentarte</h3>
-              <span class="card__sub">Alimenta tu cuerpo, nutre tu mente</span>
-              <p>Entrega productos de la canasta familiar —lácteos, verduras y proteínas— a familias que no devengan más de un salario mínimo.</p>
-              <div class="card__actions"><a class="link-arrow" href="https://fundacionunlugar.com/alimentarte/">Conoce el programa<span class="visually-hidden"> Alimentarte</span></a></div>
-            </div>
-          </article>
-          <article class="card">
-            <figure class="card__media">
-              <img src="assets/program-graphics/7.jpg" width="480" height="480" loading="lazy" alt="Niños y niñas con camisetas verdes juegan tendidos en el suelo durante una actividad deportiva al aire libre.">
-              <span class="badge badge--consent badge--on-media">consentimiento por confirmar</span>
-            </figure>
-            <div class="card__body">
+              <p class="program__tagline">Alimenta tu cuerpo, nutre tu mente</p>
+              <p>Lácteos, verduras y proteínas cada semana para familias que ganan hasta un salario mínimo, con capacitación en habilidades para la vida.</p>
+              <a class="link-arrow" href="https://fundacionunlugar.com/alimentarte/">Conoce el programa<span class="visually-hidden"> Alimentarte</span></a>
+            </li>
+            <li class="program">
+              <figure class="program__media">
+                <img src="assets/program-graphics/7.jpg" width="480" height="480" loading="lazy" alt="Niños y niñas con camisetas verdes juegan tendidos en el suelo durante una actividad deportiva al aire libre.">
+                <span class="badge badge--consent badge--on-media">consentimiento por confirmar</span>
+              </figure>
               <h3>Formarte</h3>
-              <span class="card__sub">Formación integral para futuros brillantes</span>
-              <p>Formación deportiva y artística cada sábado para desarrollar habilidades, emprendimiento y proyecto de vida.</p>
-              <div class="card__actions"><a class="link-arrow" href="https://fundacionunlugar.com/formate/">Conoce el programa<span class="visually-hidden"> Formarte</span></a></div>
-            </div>
-          </article>
-          <article class="card">
-            <figure class="card__media">
-              <img src="assets/photos/WhatsApp-Image-2024-08-02-at-1.01.47-PM.jpeg" width="800" height="620" loading="lazy" alt="Dos niños con camisetas verdes de la fundación participan en una actividad educativa al aire libre, junto a una mesa con materiales.">
-              <span class="badge badge--consent badge--on-media">consentimiento por confirmar</span>
-            </figure>
-            <div class="card__body">
+              <p class="program__tagline">Formación integral para futuros brillantes</p>
+              <p>Fútbol, danza y arte cada sábado para desarrollar talentos, hábitos y un proyecto de vida.</p>
+              <a class="link-arrow" href="https://fundacionunlugar.com/formate/">Conoce el programa<span class="visually-hidden"> Formarte</span></a>
+            </li>
+            <li class="program">
+              <figure class="program__media">
+                <img src="assets/photos/WhatsApp-Image-2024-08-02-at-1.01.47-PM.jpeg" width="800" height="620" loading="lazy" alt="Dos niños con camisetas verdes de la fundación participan en una actividad educativa al aire libre, junto a una mesa con materiales.">
+                <span class="badge badge--consent badge--on-media">consentimiento por confirmar</span>
+              </figure>
               <h3>Educarte</h3>
-              <span class="card__sub">Capacitación para familias y jóvenes</span>
-              <p>Capacita a familias, voluntarios, colaboradores y adolescentes en temas psicosociales, prevención del abuso y herramientas para la vida, con apoyo de la tecnología.</p>
-              <div class="card__actions"><a class="link-arrow" href="https://fundacionunlugar.com/capacitarte/">Conoce el programa<span class="visually-hidden"> Educarte</span></a></div>
-            </div>
-          </article>
-          <article class="card">
-            <figure class="card__media">
-              <img src="assets/program-graphics/2-3.jpg" width="480" height="480" loading="lazy" alt="Niños y niñas con camisetas verdes posan a la entrada del parque Mundo Aventura.">
-              <span class="badge badge--consent badge--on-media">consentimiento por confirmar</span>
-            </figure>
-            <div class="card__body">
+              <p class="program__tagline">Capacitación para familias y jóvenes</p>
+              <p>Formación para familias, voluntarios y adolescentes en temas psicosociales, prevención del abuso y herramientas para la vida, con apoyo de la tecnología.</p>
+              <a class="link-arrow" href="https://fundacionunlugar.com/capacitarte/">Conoce el programa<span class="visually-hidden"> Educarte</span></a>
+            </li>
+            <li class="program">
+              <figure class="program__media">
+                <img src="assets/program-graphics/2-3.jpg" width="480" height="480" loading="lazy" alt="Niños y niñas con camisetas verdes posan a la entrada del parque Mundo Aventura.">
+                <span class="badge badge--consent badge--on-media">consentimiento por confirmar</span>
+              </figure>
               <h3>Bienestar infantil</h3>
-              <span class="card__sub">Recreación y bienestar como derecho</span>
-              <p>Ofrece a niños, niñas y adolescentes acceso a parques, entretenimiento y espacios culturales que aportan a su desarrollo personal.</p>
-              <div class="card__actions"><a class="link-arrow" href="https://fundacionunlugar.com/bienestar-infantil/">Conoce el programa<span class="visually-hidden"> Bienestar infantil</span></a></div>
-            </div>
-          </article>
-          <article class="card">
-            <figure class="card__media">
-              <img src="assets/program-graphics/12.jpg" width="480" height="480" loading="lazy" alt="Tres mujeres y dos niños sostienen bolsas con alimentos y productos de aseo durante una entrega de la fundación.">
-              <span class="badge badge--consent badge--on-media">consentimiento por confirmar</span>
-            </figure>
-            <div class="card__body">
+              <p class="program__tagline">Recreación y bienestar como derecho</p>
+              <p>Acceso a parques, entretenimiento y espacios culturales, porque jugar y descubrir también cuidan la salud mental.</p>
+              <a class="link-arrow" href="https://fundacionunlugar.com/bienestar-infantil/">Conoce el programa<span class="visually-hidden"> Bienestar infantil</span></a>
+            </li>
+            <li class="program">
+              <figure class="program__media">
+                <img src="assets/program-graphics/12.jpg" width="480" height="480" loading="lazy" alt="Tres mujeres y dos niños sostienen bolsas con alimentos y productos de aseo durante una entrega de la fundación.">
+                <span class="badge badge--consent badge--on-media">consentimiento por confirmar</span>
+              </figure>
               <h3>Dignificarte</h3>
-              <span class="card__sub">Dignificación como catalizador del éxito</span>
-              <p>Facilita el acceso a herramientas que dignifican la condición humana, social y la salud de las familias: artículos del hogar, brigadas y convenios.</p>
-              <div class="card__actions"><a class="link-arrow" href="https://fundacionunlugar.com/cuidarte/">Conoce el programa<span class="visually-hidden"> Dignificarte</span></a></div>
-            </div>
-          </article>
-          <article class="card">
-            <figure class="card__media">
-              <img src="assets/photos/IMG_3815.jpeg" width="800" height="1067" loading="lazy" alt="Un grupo de niños y niñas pinta en círculo sobre el pasto durante un taller al aire libre.">
-              <span class="badge badge--consent badge--on-media">consentimiento por confirmar</span>
-            </figure>
-            <div class="card__body">
+              <p class="program__tagline">Dignificación como catalizador del éxito</p>
+              <p>Artículos para el hogar, brigadas de salud y convenios que mejoran la calidad de vida de las familias.</p>
+              <a class="link-arrow" href="https://fundacionunlugar.com/cuidarte/">Conoce el programa<span class="visually-hidden"> Dignificarte</span></a>
+            </li>
+            <li class="program">
+              <figure class="program__media">
+                <img src="assets/photos/IMG_3815.jpeg" width="800" height="1067" loading="lazy" alt="Un grupo de niños y niñas pinta en círculo sobre el pasto durante un taller al aire libre.">
+                <span class="badge badge--consent badge--on-media">consentimiento por confirmar</span>
+              </figure>
               <h3>Tu mente tu aliada</h3>
-              <span class="card__sub">Atención psicológica y social</span>
-              <p>Atención psicológica y social en salud mental y emocional para niños, niñas y adolescentes, con seguimiento a cada caso y a su familia.</p>
-              <div class="card__actions"><a class="link-arrow" href="https://fundacionunlugar.com/abrigarte/">Conoce el programa<span class="visually-hidden"> Tu mente tu aliada</span></a></div>
-            </div>
-          </article>
+              <p class="program__tagline">Atención psicológica y social</p>
+              <p>Atención psicológica y social en salud mental y emocional, para que niños, niñas y adolescentes desarrollen de forma sana su personalidad y su autoestima.</p>
+              <a class="link-arrow" href="https://fundacionunlugar.com/abrigarte/">Conoce el programa<span class="visually-hidden"> Tu mente tu aliada</span></a>
+            </li>
+          </ul>
         </div>
-        <p class="section-foot"><a class="btn btn--primary" href="https://fundacionunlugar.com/programas-08/">Ver todos los programas</a></p>
+        <p class="programs-hint" aria-hidden="true">Desliza para ver los seis programas →</p>
+        <p class="section-foot"><a class="btn btn--secondary" href="https://fundacionunlugar.com/programas-08/">Ver todos los programas</a></p>
       </div>
     </section>
 
     <!-- =================================================================
-         5. Verified impact — four of the twelve "Resultados año 2023" figures
-         Source: inventory/content/efecto.md; CONTENT_INVENTORY.md §5. Figures
-         are shown verbatim with their year; no newer figures are assumed.
+         4. Resultados 2023 — proof (COPY_v3 §4.4)
+         Four of the twelve "Resultados año 2023" figures, labels verbatim from
+         inventory/content/efecto.md (CONTENT_INVENTORY.md §5). Year on every figure.
+         Iteration 3 proposal: the one brand-blue band of the page.
          ================================================================= -->
-    <section class="section" id="resultados" aria-labelledby="impact-title">
+    <section class="section section--brand" id="resultados" aria-labelledby="impact-title">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow badge-note">Resultados 2023 <span class="badge badge--verify">cifras por confirmar</span></span>
+        <div class="results__head reveal">
+          <p class="eyebrow">Resultados 2023 <span class="badge badge--verify">cifras por confirmar</span></p>
           <h2 id="impact-title">Lo que logramos en 2023</h2>
-          <p>Cifras publicadas por la fundación para el año 2023. Cuatro de los doce resultados reportados.</p>
+          <p class="lead">Cada cifra es una familia con comida en la mesa, un niño que aprendió algo nuevo o alguien que fue escuchado. Estos son cuatro de los doce resultados que publicamos para 2023.</p>
         </div>
-        <ul class="stats">
-          <li class="stat">
+        <ul class="stats" role="list">
+          <li class="stat reveal">
             <span class="stat__value" aria-hidden="true">+150</span>
             <span class="stat__label"><span class="visually-hidden">Más de 150 </span>familias con seguridad alimentaria</span>
             <span class="badge badge--year">2023</span>
           </li>
-          <li class="stat">
+          <li class="stat reveal">
             <span class="stat__value" aria-hidden="true">+165</span>
             <span class="stat__label"><span class="visually-hidden">Más de 165 </span>niños formados</span>
             <span class="badge badge--year">2023</span>
           </li>
-          <li class="stat">
+          <li class="stat reveal">
             <span class="stat__value" aria-hidden="true">+190</span>
             <span class="stat__label"><span class="visually-hidden">Más de 190 </span>niños en actividades recreativas y de bienestar</span>
             <span class="badge badge--year">2023</span>
           </li>
-          <li class="stat">
+          <li class="stat reveal">
             <span class="stat__value" aria-hidden="true">+15</span>
-            <span class="stat__label"><span class="visually-hidden">Más de 15 </span>niños con atención psicosocial</span>
+            <span class="stat__label"><span class="visually-hidden">Más de 15 </span>niños recibieron atención psicosocial</span>
             <span class="badge badge--year">2023</span>
           </li>
         </ul>
-        <p class="section-foot"><a class="link-arrow" href="https://fundacionunlugar.com/efecto/">Ver todos los resultados 2023</a></p>
+        <p class="section-foot"><a class="link-arrow" href="https://fundacionunlugar.com/efecto/">Ver los doce resultados de 2023</a></p>
       </div>
     </section>
 
     <!-- =================================================================
-         6. Human story — testimonial video, click-to-play (no autoplay)
-         Video: YouTube wYzOMGHGs_k ("María"), poster photos/maria-.png, both
-         from the current homepage lightbox. Consent of the people featured
-         and the description of the story are pending.
+         5. En sus propias palabras — human proof (COPY_v3 §4.5)
+         Video: YouTube wYzOMGHGs_k ("María"), poster photos/maria-.png (487 × 272,
+         from the current homepage). Consent and the description of the story are pending.
          ================================================================= -->
-    <section class="section section--tint" id="historias" aria-labelledby="story-title">
-      <div class="container story__grid">
-        <div>
+    <section class="section" id="historias" aria-labelledby="story-title">
+      <div class="container story">
+        <div class="story__media reveal">
           <div class="video" id="video-maria">
             <button class="video__play" type="button" data-video-id="wYzOMGHGs_k" data-video-title="Testimonio de María – Fundación Un Lugar">
               <img src="assets/photos/maria-.png" width="487" height="272" loading="lazy" alt="">
@@ -391,16 +345,16 @@
               <span class="visually-hidden">Reproducir el testimonio de María (video de YouTube)</span>
             </button>
           </div>
-          <p class="video__caption small badge-note">
+          <p class="video__caption">
             <a href="https://www.youtube.com/watch?v=wYzOMGHGs_k" target="_blank" rel="noopener">Ver en YouTube<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
             <span class="badge badge--verify">consentimiento y descripción por confirmar</span>
           </p>
         </div>
-        <div>
-          <span class="eyebrow">Historias</span>
-          <h2 id="story-title">Escucha a quienes hacen parte de la fundación</h2>
-          <p>María cuenta en este video su experiencia con la fundación. Estos testimonios fueron publicados por la fundación en su canal de YouTube.</p>
-          <ul class="story__links">
+        <div class="story__text reveal">
+          <p class="eyebrow">Historias</p>
+          <h2 id="story-title">En sus propias palabras</h2>
+          <p class="lead">María cuenta en este video su experiencia con la fundación. Hay más testimonios en <a href="https://www.youtube.com/channel/UCwAPUrDNqpWzym_g4deLRaw" target="_blank" rel="noopener">nuestro canal de YouTube<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>.</p>
+          <ul class="story__links" role="list">
             <li><a class="link-arrow" href="https://www.youtube.com/watch?v=HXNuRX4ekmI" target="_blank" rel="noopener">Testimonio de Miguel<span class="visually-hidden"> (YouTube, pestaña nueva)</span></a></li>
             <li><a class="link-arrow" href="https://www.youtube.com/watch?v=ARlCuyzqong" target="_blank" rel="noopener">Reportaje de Semana<span class="visually-hidden"> (YouTube, pestaña nueva)</span></a></li>
           </ul>
@@ -409,18 +363,18 @@
     </section>
 
     <!-- =================================================================
-         7. Allies and institutional trust
+         6. No lo hacemos solos — trust (COPY_v3 §4.6)
          Logos: nine institutional allies from the current homepage strip
          (DECISIONS 2026-09-20, Q7). Recognitions: reconocimientos.md.
          ================================================================= -->
-    <section class="section" id="aliados" aria-labelledby="allies-title">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Nos acompañan</span>
-          <h2 id="allies-title">Aliados y reconocimientos</h2>
-          <p class="badge-note"><span>Organizaciones que han acompañado nuestro trabajo.</span> <span class="badge badge--verify">aliados vigentes por confirmar</span></p>
+    <section class="section section--rule" id="aliados" aria-labelledby="allies-title">
+      <div class="container allies">
+        <div class="allies__head reveal">
+          <p class="eyebrow">Nos acompañan</p>
+          <h2 id="allies-title">No lo hacemos solos</h2>
+          <p class="lead">Empresas e instituciones que han acompañado nuestro trabajo, y medios que lo han contado. <span class="badge badge--verify">aliados vigentes por confirmar</span></p>
         </div>
-        <ul class="logos" aria-label="Logos de aliados">
+        <ul class="logos reveal" aria-label="Logos de aliados" role="list">
           <li><img src="assets/partner-logos/3-2.png" width="244" height="160" loading="lazy" alt="Banco de Alimentos Bogotá"></li>
           <li><img src="assets/partner-logos/maloka-1.jpg" width="138" height="150" loading="lazy" alt="Maloka"></li>
           <li><img src="assets/partner-logos/parque-mundo-aventura-1.jpg" width="160" height="160" loading="lazy" alt="Parque Mundo Aventura"></li>
@@ -431,70 +385,122 @@
           <li><img src="assets/partner-logos/2-2.png" width="244" height="160" loading="lazy" alt="4-72"></li>
           <li><img src="assets/partner-logos/11-1.png" width="244" height="160" loading="lazy" alt="Salach"></li>
         </ul>
-        <h3 class="visually-hidden">Reconocimientos</h3>
-        <ul class="recognitions" style="margin-top: var(--space-7);">
-          <li>
-            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
-            <p><strong>Revista Semana</strong><br><a href="https://www.semana.com/noticias/fundacion-un-lugar-donde-puedes-crecer/" target="_blank" rel="noopener">Noticias sobre la fundación en Semana<span class="visually-hidden"> (pestaña nueva)</span></a></p>
-          </li>
-          <li>
-            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-            <p><strong>Historias Solidarias, Semana Play</strong><br><a href="https://www.semana.com/semanaplay/historias-solidarias/articulo/una-oportunidad-para-que-un-nino-aprenda-ingles-jugando/202333/" target="_blank" rel="noopener">Ver el reportaje<span class="visually-hidden"> (pestaña nueva)</span></a></p>
-          </li>
-          <li>
-            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-            <p><strong>Premio Conquista Social 2024</strong> <span class="badge badge--verify">por confirmar</span><br><a href="https://www.instagram.com/reel/DCkxSAWJh1F/" target="_blank" rel="noopener">Ver la publicación en Instagram<span class="visually-hidden"> (pestaña nueva)</span></a></p>
-          </li>
-        </ul>
-        <p class="section-foot"><a class="link-arrow" href="https://fundacionunlugar.com/reconocimientos/">Ver todos los reconocimientos</a></p>
+        <div class="allies__recognitions reveal">
+          <h3 class="allies__subtitle">Reconocimientos</h3>
+          <ul class="recognitions" role="list">
+            <li>
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+              <p><strong>Revista Semana</strong><br><a href="https://www.semana.com/noticias/fundacion-un-lugar-donde-puedes-crecer/" target="_blank" rel="noopener">Noticias sobre la fundación en Semana<span class="visually-hidden"> (pestaña nueva)</span></a></p>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+              <p><strong>Historias Solidarias, Semana Play</strong><br><a href="https://www.semana.com/semanaplay/historias-solidarias/articulo/una-oportunidad-para-que-un-nino-aprenda-ingles-jugando/202333/" target="_blank" rel="noopener">Ver el reportaje<span class="visually-hidden"> (pestaña nueva)</span></a></p>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+              <p><strong>Premio Conquista Social 2024</strong> <span class="badge badge--verify">por confirmar</span><br><a href="https://www.instagram.com/reel/DCkxSAWJh1F/" target="_blank" rel="noopener">Ver la publicación en Instagram<span class="visually-hidden"> (pestaña nueva)</span></a></p>
+            </li>
+          </ul>
+          <p class="allies__link"><a class="link-arrow" href="https://fundacionunlugar.com/reconocimientos/">Ver todos los reconocimientos</a></p>
+        </div>
       </div>
     </section>
 
     <!-- =================================================================
-         8. Ways to participate — apadrinar, dona, voluntariado, patrocinar
-         Copy: apadrinar.md, dona.md, voluntariado.md, patrocinar-causas.md.
-         Store omitted pending the store decision (brief §7.7).
+         7. Apadrina: así funciona — the ask (COPY_v3 §4.7)
+         Amount, use of the gift, reports, encounters and the safety rule from
+         apadrinar.md; registration note from dona.md. The button is blue, not gold:
+         gold stays reserved for the header "Dona" and the hero (DECISIONS 2026-09-20).
          ================================================================= -->
-    <section class="section section--alt" id="sumate" aria-labelledby="help-title">
+    <section class="section section--alt" id="apadrina" aria-labelledby="sponsor-title">
+      <div class="container sponsor">
+        <div class="sponsor__intro reveal">
+          <p class="eyebrow">Apadrina a un niño</p>
+          <h2 id="sponsor-title">Dale a un niño un lugar donde crecer</h2>
+          <p class="lead">Con $45.000 al mes (es decir, $1.500 al día) apoyas la formación, la alimentación y el acompañamiento de tu ahijado. <span class="badge badge--verify">monto por confirmar</span></p>
+          <div class="sponsor__actions">
+            <a class="btn btn--primary btn--lg" href="https://fundacionunlugar.com/apadrinar/">Apadrina a un niño</a>
+            <a class="link-arrow" href="https://fundacionunlugar.com/dona/">Prefiero hacer una donación única</a>
+          </div>
+          <p class="small text-muted">Para que tu donación quede registrada a tu nombre, envía el comprobante a <a href="mailto:donaciones@fundacionunlugar.com">donaciones@fundacionunlugar.com</a>.</p>
+        </div>
+        <div class="sponsor__how reveal">
+          <h3>Así funciona</h3>
+          <ol class="steps" role="list">
+            <li class="step">
+              <span class="step__num" aria-hidden="true">1</span>
+              <div>
+                <h4>Te inscribes</h4>
+                <p>Llenas el formulario de apadrinamiento y haces tu aporte de $45.000 cada mes.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step__num" aria-hidden="true">2</span>
+              <div>
+                <h4>Tu aporte llega a tu ahijado</h4>
+                <p>Se destina a su formación, su alimentación y su acompañamiento.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step__num" aria-hidden="true">3</span>
+              <div>
+                <h4>Sigues su camino</h4>
+                <p>Recibes informes de su progreso y te invitamos a los encuentros de padrinos, dos veces al año. <span class="badge badge--verify">informes y encuentros por confirmar</span></p>
+              </div>
+            </li>
+          </ol>
+          <p class="safety">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            <span>Por su seguridad, tu ahijado sabrá que está apadrinado, pero no quién es su padrino o madrina.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         8. Hay un lugar para ti — every other visitor (COPY_v3 §4.8)
+         Families: inscribete-programas.md (sábados, 9–18 años), nuestros-programas.md
+         (eligibility). Volunteers: voluntariado.md. Companies: patrocinar-causas.md.
+         ================================================================= -->
+    <section class="section" id="sumate" aria-labelledby="help-title">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Tú puedes sumarte</span>
-          <h2 id="help-title">Cuatro formas de apoyar este trabajo</h2>
+        <div class="head-split reveal">
+          <div>
+            <p class="eyebrow">Súmate</p>
+            <h2 id="help-title">Hay un lugar para ti</h2>
+          </div>
+          <p class="lead">Ya seas una familia, una persona con tiempo para dar o una empresa, hay una forma de hacer parte de la fundación.</p>
         </div>
-        <div class="grid grid--4">
-          <article class="card card--action card--featured">
-            <div class="card__body">
-              <svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-              <h3>Apadrina a un niño</h3>
-              <p><strong>$45.000 al mes</strong> ($1.500 al día). Tu aporte se destina a la formación, la alimentación y el acompañamiento de tu ahijado, y recibes informes de su progreso. <span class="badge badge--verify">monto e informes por confirmar</span></p>
-              <div class="card__actions"><a class="btn btn--primary" href="https://fundacionunlugar.com/apadrinar/">Apadrinar</a></div>
+        <ul class="doors" role="list">
+          <li class="door reveal">
+            <svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+            <p class="door__label">Familias</p>
+            <h3>Inscribe a tu hijo o hija</h3>
+            <p>Clases de fútbol, danza y arte los sábados para niños, niñas y adolescentes de 9 a 18 años. Los programas son para familias de la comunidad que acompaña la fundación. <span class="badge badge--verify">horario por confirmar</span></p>
+            <div class="door__actions">
+              <a class="btn btn--secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSeCDr8CuEnLXbuR0zRH3iXmYmvRIH39ScYODW0EZLhKXya0WQ/viewform" target="_blank" rel="noopener">Inscríbete<span class="visually-hidden"> (formulario de Google, se abre en una pestaña nueva)</span></a>
+              <a class="link-arrow" href="https://fundacionunlugar.com/inscribete-programas/">Ver horarios</a>
             </div>
-          </article>
-          <article class="card card--action">
-            <div class="card__body">
-              <svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>
-              <h3>Dona una vez</h3>
-              <p>Aporta una sola vez por el valor que elijas, con pago en línea seguro. Para que la donación quede registrada a tu nombre, envía el comprobante al correo de donaciones que encuentras al pie de esta página.</p>
-              <div class="card__actions"><a class="btn btn--secondary" href="https://fundacionunlugar.com/dona/">Donar</a></div>
+          </li>
+          <li class="door reveal">
+            <svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <p class="door__label">Voluntariado</p>
+            <h3>Sé voluntario</h3>
+            <p>Aporta tu tiempo y tu talento en Patio Bonito. Necesitas ser mayor de edad, tener disponibilidad los fines de semana y contar con seguro médico.</p>
+            <div class="door__actions">
+              <a class="btn btn--secondary" href="https://fundacionunlugar.com/voluntariado/">Quiero ser voluntario</a>
             </div>
-          </article>
-          <article class="card card--action">
-            <div class="card__body">
-              <svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              <h3>Sé voluntario</h3>
-              <p>Aporta tu tiempo en Patio Bonito. Requisitos: ser mayor de edad, tener disponibilidad los fines de semana y contar con seguro médico.</p>
-              <div class="card__actions"><a class="btn btn--secondary" href="https://fundacionunlugar.com/voluntariado/">Ser voluntario</a></div>
+          </li>
+          <li class="door reveal">
+            <svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+            <p class="door__label">Empresas</p>
+            <h3>Patrocina un programa</h3>
+            <p>Con $300.000 al mes tu empresa patrocina uno de nuestros programas y recibe cada trimestre un informe con cifras de impacto. <span class="badge badge--verify">monto por confirmar</span></p>
+            <div class="door__actions">
+              <a class="btn btn--secondary" href="https://fundacionunlugar.com/patrocinar-causas/">Patrocinar un programa</a>
             </div>
-          </article>
-          <article class="card card--action">
-            <div class="card__body">
-              <svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
-              <h3>Patrocina una causa</h3>
-              <p>Para empresas: con <strong>$300.000 al mes</strong> tu empresa patrocina uno de nuestros programas y recibe un informe trimestral de cifras de impacto. <span class="badge badge--verify">monto por confirmar</span></p>
-              <div class="card__actions"><a class="btn btn--secondary" href="https://fundacionunlugar.com/patrocinar-causas/">Patrocinar</a></div>
-            </div>
-          </article>
-        </div>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -506,9 +512,9 @@
         <details class="pending">
           <summary id="pending-title">Pendientes de confirmación (vista previa)</summary>
           <div class="pending__body">
-            <p class="small text-muted">Cada elemento marcado <span class="badge badge--verify">por confirmar</span> en esta página depende de una suposición de trabajo registrada el 20 de septiembre de 2026. Nada se publica hasta que la fundación lo confirme.</p>
+            <p class="small text-muted">Cada elemento marcado <span class="badge badge--verify">por confirmar</span> en esta página depende de una suposición de trabajo registrada en septiembre de 2026. Nada se publica hasta que la fundación lo confirme.</p>
             <ol>
-              <li><strong>Apadrinamiento:</strong> monto de $45.000 al mes ($1.500 al día), qué cubre y qué informes recibe el padrino (trimestrales y cuatrimestrales según la página actual).</li>
+              <li><strong>Apadrinamiento:</strong> monto de $45.000 al mes ($1.500 al día), qué cubre, qué informes recibe el padrino (la página actual dice cada tres y cada cuatro meses), los encuentros de padrinos (dos al año) y la regla de seguridad (el ahijado sabe que está apadrinado, pero no quién es su padrino).</li>
               <li><strong>Patrocinio empresarial:</strong> monto de $300.000 al mes ($9.990 al día) e informe trimestral.</li>
               <li><strong>Resultados 2023:</strong> las cuatro cifras mostradas (y las doce publicadas en «Efecto»); si existen cifras de 2024 o 2025.</li>
               <li><strong>Aliados:</strong> que los nueve logos correspondan a alianzas vigentes y autorizadas. Excluidos hasta confirmar: iglesias, grupos scout y explorador, #ReinaElCorazón, StarsKids y la tarjeta personal de un abogado.</li>
@@ -520,6 +526,8 @@
               <li><strong>Contacto:</strong> que los dos números de WhatsApp estén atendidos y que los dos correos institucionales sean los públicos.</li>
               <li><strong>Documentos:</strong> si existen un informe de gestión y un certificado de trayectoria más recientes que 2022 y 2024.</li>
               <li><strong>Pasarela de pagos:</strong> el texto dice «pago en línea seguro» sin nombrar proveedor (la página actual mezcla Wompi y PaymentsWay).</li>
+              <li><strong>Programas:</strong> las descripciones vienen de las páginas de cada programa (2024); confirmar que siguen vigentes, en especial las entregas semanales de Alimentarte y las clases de los sábados.</li>
+              <li><strong>Línea 106 y 123:</strong> el líder psicosocial aprueba el texto sobre salud mental y la línea de ayuda, y los números se vuelven a verificar antes de publicar (fuente: Secretaría Distrital de Salud de Bogotá, consultada el 24 de septiembre de 2026).</li>
             </ol>
           </div>
         </details>
@@ -528,13 +536,9 @@
   </main>
 
   <!-- ===================================================================
-       9. Contact and transparency — global footer
+       Contact and transparency — global footer (approved 2026-09-20, unchanged)
        Source: _header-footer.md, documentacion-legal, informes-de-gestion,
-       certificado-de-trayectoria; DECISIONS 2026-09-20 Q9–Q10.
-       Simplified 2026-09-20 at the owner's request ("too cluttered"): the
-       navigation mirror, the non-sending preview form, the duplicate phone /
-       map / certificate links and the 15 MB presentation were removed. The
-       header menu remains the navigation; "Contacto" links to the live page.
+       certificado-de-trayectoria; DECISIONS 2026-09-20 Q9–Q10 and "Simplified footer".
        =================================================================== -->
   <footer class="site-footer" id="contacto">
     <div class="container">
@@ -584,5 +588,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/splash3d.js" defer></script>
 </body>
 </html>

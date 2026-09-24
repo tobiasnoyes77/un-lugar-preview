@@ -92,6 +92,28 @@
     });
   });
 
+  /* ---------- Program row (iteration 3): on phones it scrolls sideways, so it
+     becomes a labelled, keyboard-focusable region; on wider screens it is a plain grid. */
+  var scroller = document.querySelector('.programs-scroller');
+  function updateScroller() {
+    if (!scroller) return;
+    if (scroller.scrollWidth > scroller.clientWidth + 1) {
+      scroller.setAttribute('role', 'region');
+      scroller.setAttribute('tabindex', '0');
+      scroller.setAttribute('aria-label', scroller.getAttribute('data-scroll-label') || 'Programas');
+    } else {
+      scroller.removeAttribute('role');
+      scroller.removeAttribute('tabindex');
+      scroller.removeAttribute('aria-label');
+    }
+  }
+  updateScroller();
+  var resizeTimer = 0;
+  window.addEventListener('resize', function () {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(updateScroller, 150);
+  });
+
   /* ---------- Current year in the copyright line ---------- */
   var year = document.getElementById('anio-actual');
   if (year) year.textContent = String(new Date().getFullYear());
