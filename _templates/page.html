@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ===================================================================
+       TEMPLATE for every interior page (not a publishable page).
+       Copy this file to <slug>/index.html. Every interior page sits one folder
+       deep, so every local path starts with "../". Keep the preview bar,
+       header and footer exactly as they are here, except for:
+       - aria-current="page" on your page's link in the menu (if it is in the menu)
+       - the date in the preview bar
+       Change the <title>, description, canonical and og:* for your page.
+       Components: css/pages.css (interior pages) and css/styles.css (homepage).
+       Rules: prompts/04-pages/00-shared-rules.md.
+       =================================================================== -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[Título de la página] – Fundación Un Lugar</title>
+  <meta name="description" content="[Una o dos frases, unos 150 caracteres, con lo que la persona encuentra en esta página.]">
+  <!-- Canonical: the live URL this page will replace. Preview is private and must not be indexed. -->
+  <link rel="canonical" href="https://fundacionunlugar.com/[slug]/">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Fundación Un Lugar">
+  <meta property="og:title" content="[Título de la página] – Fundación Un Lugar">
+  <meta property="og:description" content="[La misma descripción, o una más corta.]">
+  <meta property="og:url" content="https://fundacionunlugar.com/[slug]/">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <!-- Optional, only if the family needs its own styles: <link rel="stylesheet" href="../css/family-[id].css"> -->
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido principal</a>
+
+  <!-- Preview notice: remove at publication -->
+  <div class="preview-bar" role="note" aria-label="Aviso de vista previa">
+    <div class="container">
+      <p><strong>Vista previa privada</strong> · páginas interiores · [fecha]. Lo marcado <span class="badge badge--verify">por confirmar</span> espera verificación de la fundación. <a href="#pendientes">Ver pendientes</a></p>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       Header — identical on every interior page (homepage iteration 3, with
+       local links). The group items stay disclosure buttons; each submenu now
+       starts with the group's landing page.
+       =================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../" aria-label="Fundación Un Lugar – inicio">
+        <img src="../assets/logo/Logo-fundacion.png" width="600" height="496" alt="Fundación Un Lugar, donde puedes crecer">
+      </a>
+
+      <nav class="nav" id="menu-principal" aria-label="Principal">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--has-sub">
+            <button class="nav__sub-toggle" type="button" aria-expanded="false" aria-controls="sub-quienes">
+              Quiénes somos
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="nav__sub" id="sub-quienes">
+              <li><a href="../quienes-somos/">Conoce la fundación</a></li>
+              <li><a href="../nuestro-objetivo/">Nuestro objetivo</a></li>
+              <li><a href="../mision-y-vision/">Misión y visión</a></li>
+              <li><a href="../nuestro-equipo/">Nuestro equipo</a></li>
+              <li><a href="../organigrama/">Organigrama</a></li>
+            </ul>
+          </li>
+          <li class="nav__item nav__item--has-sub">
+            <button class="nav__sub-toggle" type="button" aria-expanded="false" aria-controls="sub-trabajo">
+              Nuestro trabajo
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="nav__sub" id="sub-trabajo">
+              <li><a href="../nuestro-trabajo/">Conoce nuestro trabajo</a></li>
+              <li><a href="../programas-08/">Nuestros programas</a></li>
+              <li><a href="../efecto/">Efectos de nuestros programas</a></li>
+              <li><a href="../objetivos/">Nuestro aporte a los ODS</a></li>
+              <li><a href="../agenda-de-desarrollo-nacional/">Nuestro aporte a la agenda de desarrollo nacional</a></li>
+              <li><a href="../boletines/">Boletines de gestión</a></li>
+              <li><a href="../certificado-de-trayectoria/">Certificado de trayectoria</a></li>
+              <li><a href="https://educarte.info/" target="_blank" rel="noopener">Educarte, formación en línea<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(se abre en una pestaña nueva)</span></a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="../reconocimientos/">Reconocimientos</a></li>
+          <li class="nav__item"><a class="nav__link" href="https://fundacionunlugar.com/tienda/">Tienda</a></li>
+          <li class="nav__item"><a class="nav__link" href="../ways-to-help/">Ayuda</a></li>
+          <li class="nav__item nav__cta"><a class="btn btn--donate btn--block" href="../dona/">Dona</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn--donate" href="../dona/">Dona</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+          <svg class="icon icon--menu" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+          <svg class="icon icon--close" aria-hidden="true" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          <span>Menú</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- =================================================================
+         Page intro — breadcrumb, the page's one h1, lead, optional actions and photo.
+         Without a photo: drop "page-intro--media" and the <figure>.
+         Photo source: inventory/assets/photos/IMG_3829-scaled.jpeg (hands only).
+         ================================================================= -->
+    <section class="page-intro page-intro--media" id="inicio" aria-labelledby="page-title">
+      <div class="container page-intro__grid">
+        <div class="page-intro__content">
+          <nav class="breadcrumb" aria-label="Ruta de navegación">
+            <ol>
+              <li><a href="../">Inicio</a></li>
+              <li><a href="../quienes-somos/">[Grupo]</a></li>
+              <li><span aria-current="page">[Página]</span></li>
+            </ol>
+          </nav>
+          <h1 class="page-intro__title" id="page-title">[Título de la página en una idea clara]</h1>
+          <p class="page-intro__lead">[Entrada de una o dos frases: qué encuentra la persona aquí y por qué le importa. Solo hechos con fuente en inventory/content/.]</p>
+          <div class="page-intro__actions">
+            <a class="btn btn--primary" href="../apadrinar/">[Acción principal]</a>
+            <a class="link-arrow" href="../ways-to-help/">[Acción secundaria]</a>
+          </div>
+          <p class="page-intro__note"><span>[Nota breve bajo la acción]</span> <span class="badge badge--verify">por confirmar</span></p>
+        </div>
+        <figure class="media media--lift">
+          <div class="media__frame">
+            <img src="../assets/photos/IMG_3829-scaled.jpeg"
+                 srcset="../assets/photos/IMG_3829-scaled-w600.jpeg 600w, ../assets/photos/IMG_3829-scaled.jpeg 1000w"
+                 sizes="(min-width: 64em) 36vw, 92vw"
+                 width="1000" height="1778" fetchpriority="high"
+                 alt="Las manos de un niño estampan huellas de pintura azul y amarilla sobre papel en un taller de arte de la fundación.">
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Text and photo. .split--reverse puts the photo on the left from 1024 px. -->
+    <section class="section section--rule" aria-labelledby="t-split">
+      <div class="container split">
+        <div class="split__text prose">
+          <p class="eyebrow">[Antetítulo]</p>
+          <h2 id="t-split">[Título de sección]</h2>
+          <p>[Párrafo. Máximo unas 65 letras por línea: .prose limita el ancho.]</p>
+          <ul>
+            <li>[Elemento de lista]</li>
+            <li>[Elemento de lista]</li>
+          </ul>
+          <blockquote><p>[Cita textual publicada por la fundación, con su fuente en el archivo de textos.]</p></blockquote>
+        </div>
+        <figure class="media">
+          <div class="media__frame">
+            <img src="../assets/program-graphics/7.jpg" width="480" height="480" loading="lazy"
+                 alt="Niños y niñas con camisetas verdes juegan tendidos en el suelo durante una actividad deportiva al aire libre.">
+            <span class="badge badge--consent badge--on-media">consentimiento por confirmar</span>
+          </div>
+          <figcaption>[Pie de foto opcional.]</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Main column with a side column: key facts and a summary box. -->
+    <section class="section section--alt" aria-labelledby="t-facts">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">[Antetítulo]</p>
+          <h2 id="t-facts">[Datos clave]</h2>
+          <p class="lead">[Entrada de la sección.]</p>
+        </div>
+        <div class="with-aside">
+          <div class="with-aside__main">
+            <dl class="facts">
+              <div><dt>[Para quién]</dt><dd>[Respuesta breve]</dd></div>
+              <div><dt>[Cuándo]</dt><dd>[Respuesta breve] <span class="badge badge--verify">horario por confirmar</span></dd></div>
+              <div><dt>[Dónde]</dt><dd>[Respuesta breve]</dd></div>
+            </dl>
+            <div class="callout callout--pending">
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+              <div>
+                <h3>Contenido por definir</h3>
+                <p>[Solo en la vista previa: qué información debe entregar la fundación para completar esta parte.]</p>
+              </div>
+            </div>
+          </div>
+          <aside class="with-aside__aside panel" aria-labelledby="t-panel">
+            <h3 id="t-panel">[Resumen]</h3>
+            <p>[Texto breve.]</p>
+            <a class="btn btn--primary btn--block" href="../apadrinar/">[Acción]</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documents (PDFs stay at their live URLs), then questions and answers (native <details>). -->
+    <section class="section" aria-labelledby="t-docs">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="t-docs">[Documentos]</h2>
+        </div>
+        <ul class="doc-list" role="list">
+          <li class="doc">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+            <div class="doc__body">
+              <h3 class="doc__title"><a href="https://fundacionunlugar.com/wp-content/uploads/2023/12/1.-INFORME-GESTIO%CC%80N-SOCIAL-2022.pdf" target="_blank" rel="noopener">Informe de gestión social 2022<span class="visually-hidden"> (PDF, se abre en una pestaña nueva)</span></a></h3>
+              <p class="doc__meta">PDF · 14 MB · 2022</p>
+              <p>[Qué contiene el documento, en una frase.]</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--rule" aria-labelledby="t-faq">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="t-faq">[Preguntas frecuentes]</h2>
+        </div>
+        <div class="faq">
+          <details class="faq__item">
+            <summary>[¿Pregunta?]</summary>
+            <div class="faq__answer"><p>[Respuesta con fuente.]</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>[¿Otra pregunta?]</summary>
+            <div class="faq__answer"><p>[Respuesta con fuente.]</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other pages in the same group ("También en …"); the same component lists the children on a group landing. -->
+    <section class="section section--rule" aria-labelledby="t-related">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="t-related">También en [grupo]</h2>
+        </div>
+        <ul class="link-grid" role="list">
+          <li class="link-card">
+            <h3>Nuestro objetivo</h3>
+            <p>[Una frase sobre la página.]</p>
+            <a class="link-arrow" href="../nuestro-objetivo/">Leer más<span class="visually-hidden"> sobre nuestro objetivo</span></a>
+          </li>
+          <li class="link-card">
+            <h3>Misión y visión</h3>
+            <p>[Una frase sobre la página.]</p>
+            <a class="link-arrow" href="../mision-y-vision/">Leer más<span class="visually-hidden"> sobre la misión y la visión</span></a>
+          </li>
+          <li class="link-card">
+            <h3>Nuestro equipo</h3>
+            <p>[Una frase sobre la página.]</p>
+            <a class="link-arrow" href="../nuestro-equipo/">Leer más<span class="visually-hidden"> sobre nuestro equipo</span></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Closing call to action: one primary button (blue), optional text link. -->
+    <section class="section section--alt page-cta" aria-labelledby="t-cta">
+      <div class="container page-cta__inner">
+        <div>
+          <h2 id="t-cta">[Cierre: la siguiente acción]</h2>
+          <p class="lead">[Una frase que invita a actuar.]</p>
+        </div>
+        <div class="page-cta__actions">
+          <a class="btn btn--primary" href="../apadrinar/">[Acción]</a>
+          <a class="link-arrow" href="../ways-to-help/">[Otra forma de ayudar]</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pending confirmations — preview only, remove at publication. List this page's items plus the footer line. -->
+    <section class="section section--tight" id="pendientes" aria-labelledby="pending-title">
+      <div class="container">
+        <details class="pending">
+          <summary id="pending-title">Pendientes de confirmación (vista previa)</summary>
+          <div class="pending__body">
+            <p class="small text-muted">Cada elemento marcado <span class="badge badge--verify">por confirmar</span> en esta página depende de una suposición de trabajo o de información que la fundación aún no ha confirmado. Nada se publica hasta que la fundación lo confirme.</p>
+            <ol>
+              <li><strong>[Tema]:</strong> [qué hay que confirmar y dónde está la fuente].</li>
+              <li><strong>Pie de página:</strong> NIT y dirección registrada; que los números de WhatsApp y los correos sean los públicos.</li>
+            </ol>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================
+       Footer — identical on every page (approved 2026-09-20), with local links.
+       =================================================================== -->
+  <footer class="site-footer" id="contacto">
+    <div class="container">
+      <h2 class="visually-hidden">Contacto y transparencia</h2>
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="logo-panel">
+            <img src="../assets/logo/Logo-fundacion.png" width="600" height="496" alt="Fundación Un Lugar, donde puedes crecer">
+          </div>
+          <p><strong>Fundación Un Lugar Donde Puedes Crecer</strong><br>
+            <span class="badge-note">NIT <span class="badge badge--verify">por confirmar</span></span></p>
+          <ul class="social" aria-label="Redes sociales">
+            <li><a href="https://www.instagram.com/fundacionunlugar/" target="_blank" rel="noopener" aria-label="Instagram (pestaña nueva)"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg></a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100064761306510" target="_blank" rel="noopener" aria-label="Facebook (pestaña nueva)"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li>
+            <li><a href="https://www.youtube.com/channel/UCwAPUrDNqpWzym_g4deLRaw" target="_blank" rel="noopener" aria-label="YouTube (pestaña nueva)"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contacto</h3>
+          <ul class="footer__list">
+            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Calle+6+%23+88G-11%2C+Bogot%C3%A1" target="_blank" rel="noopener">Calle 6 # 88G-11, Bogotá<span class="visually-hidden"> (Google Maps, pestaña nueva)</span></a> <span class="badge badge--verify">dirección por confirmar</span></li>
+            <li><a href="https://wa.me/573052018095" target="_blank" rel="noopener">WhatsApp +57 305 201 8095<span class="visually-hidden"> (pestaña nueva)</span></a></li>
+            <li><a href="https://wa.me/573004915347" target="_blank" rel="noopener">WhatsApp +57 300 491 5347<span class="visually-hidden"> (pestaña nueva)</span></a></li>
+            <li><a href="mailto:relacionespublicas@fundacionunlugar.com">relacionespublicas@fundacionunlugar.com</a></li>
+            <li><a href="mailto:donaciones@fundacionunlugar.com">donaciones@fundacionunlugar.com</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Transparencia</h3>
+          <ul class="footer__list">
+            <li><a href="https://fundacionunlugar.com/wp-content/uploads/2023/12/1.-INFORME-GESTIO%CC%80N-SOCIAL-2022.pdf" target="_blank" rel="noopener">Informe de gestión social 2022 (PDF, 14 MB)</a></li>
+            <li><a href="https://fundacionunlugar.com/wp-content/uploads/2024/03/Certificado-de-trayectoria-trabajo-social-2024-2.pdf" target="_blank" rel="noopener">Certificado de trayectoria 2024 (PDF)</a></li>
+            <li><a href="https://fundacionunlugar.com/wp-content/uploads/2023/12/2.-RUT-FUNDACION-COMPLETO-Regimen-especial.pdf" target="_blank" rel="noopener">RUT – régimen tributario especial (PDF)</a></li>
+            <li><a href="../terminos-y-condiciones/">Términos y condiciones</a></li>
+            <li><a href="../tratamiento-de-datos/">Tratamiento de datos personales</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© <span id="anio-actual">2026</span> Fundación Un Lugar Donde Puedes Crecer. Todos los derechos reservados.</span>
+        <span><a href="../contacto/">Contacto</a> · <a href="#inicio">Volver arriba</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

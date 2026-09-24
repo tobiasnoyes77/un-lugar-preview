@@ -9,10 +9,18 @@ Plain static HTML/CSS/JS, no build step.
 - `assets/`: images copied from `inventory/assets/` (provenance in `assets/README.md`).
 - `_screenshots/` (git-ignored): the current renders, `iteration-1/` and `iteration-2/` (earlier renders), the before/after comparisons, and `_tools/` (wrapper pages for the automated checks, plus `linkcheck.txt`).
 
+## Interior pages (page-family rollout, 2026-09-24)
+
+- Every interior page is `<slug>/index.html`, one folder deep, so every local path starts with `../`. Slugs are the live site's (`inventory/SITE_ARCHITECTURE.md`; the renames there are still proposals).
+- `_templates/page.html` is the starting point for every page: preview bar, header and footer with local links, the page intro with its breadcrumb, one example of each component, and the pending panel. It is not a publishable page.
+- `css/pages.css` holds the shared interior-page components (page intro, breadcrumb, media frame, prose, split, with-aside, facts, panel, link grid, documents, questions, callouts, light stats, tables, closing call to action). `css/tokens.css` gained one token, `--fs-page-title`.
+- Family-only styles go in `css/family-<id>.css`. The rules and the URL map are in `../prompts/04-pages/00-shared-rules.md`, and the checks are in `../tools/page-checks/`.
+
 ## Branches and the review URL
 
 - `main` = iteration 2, published at <https://tobiasnoyes77.github.io/un-lugar-preview/> (GitHub Pages from the public repo `tobiasnoyes77/un-lugar-preview`). Unlisted and `noindex`, but not access-controlled.
-- `iteration-3` = the redesign (2026-09-24). It is local only and **not pushed**. The owner decides whether it replaces the published preview.
+- `iteration-3` = the redesign (2026-09-24), approved by the owner as the homepage on 2026-09-24 (reversing "Iteration 3 not adopted" the same day). It is local only and **not pushed**.
+- `pages-base` = iteration 3 plus the interior-page base above. The five family branches `pages/01-programas` … `pages/05-legal` start here and are merged by the integration step (`../prompts/04-pages/06-integrate.md`). Nothing is pushed without the owner's go-ahead.
 
 Use the Command Line Tools git (`/usr/bin/git` is blocked by the Xcode licence on this Mac):
 
