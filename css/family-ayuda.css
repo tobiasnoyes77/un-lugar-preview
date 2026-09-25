@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Fundación Un Lugar — page family 02, Ayuda (ways to help, sponsorship,
+   donations, volunteering, company sponsorship, contact).
+   Loaded after tokens.css, styles.css and pages.css on these six pages only.
+   Prefixed modifiers (ay-) on top of the shared components; tokens only, no new
+   colours, the same breakpoints. Candidates for pages.css are listed in
+   handoff/02-ayuda.md.
+   ========================================================================== */
+
+/* Steps that sit directly under an h2 on an interior page: the step titles are
+   h3 (no skipped heading level), styled like the homepage's h4 steps so the
+   numbered circles still line up with them. */
+.ay-steps .step h3 { font-size: 1.125rem; letter-spacing: -0.006em; margin: 0.55rem 0 var(--space-1); }
+
+/* A preview-only callout that follows another block (questions, key facts). */
+.ay-callout-after { margin-top: var(--space-6); }
+
+/* Contact channels (/contacto/): a readable width, and underlined links without
+   the arrow, so a long e-mail address can wrap without leaving its arrow behind. */
+.ay-channels { max-width: 48rem; }
+.ay-contact-link { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+.ay-contact-link::after { content: none; }
+
+/* A photo beside text (.split) keeps the intro photo's width on tablets
+   (34rem, like .page-intro--media .media) instead of the full column. */
+@media (min-width: 48em) {
+  .ay-media--capped { max-width: 34rem; }
+}
+
+@media (min-width: 64em) {
+  .ay-media--capped { max-width: none; }
+  /* The Ayuda landing lists four ways to help: two columns from 1024 px instead
+     of three, so no card is left alone on the last row. */
+  .ay-link-grid--pairs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
