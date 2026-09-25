@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Fundación Un Lugar — family 05, legal pages (prefix lg-)
+   Loaded after pages.css on /tratamiento-de-datos/ and /terminos-y-condiciones/.
+   Only what pages.css does not cover: the contents list of a long legal text,
+   the pending callout inside the page intro and the related-document line.
+   Tokens only; mobile-first with the shared breakpoints; shared classes are
+   never redefined here, only extended through an lg- class on the element.
+   ========================================================================== */
+
+/* ---------- Pending callout inside the page intro, under the date line ---------- */
+.lg-intro-callout { margin: var(--space-5) 0 0; }
+
+/* ---------- Legal text with its contents list (on a .with-aside container) ----------
+   The contents list comes first in the source, so phones and tablets show it above
+   the text, where it is useful. From 1024 px it moves to the side column, sticky
+   as in .with-aside, and both columns share the first row. */
+@media (min-width: 64em) {
+  .lg-legal > .with-aside__main,
+  .lg-legal > .with-aside__aside { grid-row: 1; }
+}
+
+/* ---------- Contents list (on a .panel): one 44 px link per section ---------- */
+.lg-toc { max-width: var(--measure); padding: var(--space-5); }   /* as wide as the text below it on phones and tablets */
+.lg-toc > .lg-toc__title {
+  margin-bottom: var(--space-3); font-size: var(--fs-eyebrow); font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow); line-height: 1.4; text-transform: uppercase; color: var(--grey-700);
+}
+.lg-toc__list { border-top: 1px solid var(--color-rule); }
+.lg-toc__list li { border-bottom: 1px solid var(--color-rule); }
+.lg-toc__list a {
+  display: flex; align-items: center; min-height: var(--target-min); padding-block: var(--space-2);
+  font-size: 0.9375rem; font-weight: 500; line-height: 1.35; text-decoration: none;
+}
+.lg-toc__list a:hover { text-decoration: underline; }
+
+/* ---------- The legal text (on a .prose block) ---------- */
+.lg-prose > h2 + h3 { margin-top: 0; }   /* a numbered subsection (2.1, 4.1) follows its section title directly */
+
+/* ---------- Related document, after the last section ---------- */
+.lg-related {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--space-3);
+  margin-top: var(--space-8); padding-top: var(--space-4); border-top: 1px solid var(--color-rule);
+}
+.lg-prose > .facts + .lg-related { margin-top: 0; padding-top: 0; border-top: 0; }   /* the list above already ends with a hairline */
+.lg-related__label { font-size: var(--fs-small); color: var(--grey-700); }
+
+@media (min-width: 40em) { /* 640 px */
+  .lg-toc { padding: var(--space-6); }
+}
+@media (min-width: 64em) { /* 1024 px: the side column is narrower, keep the list compact */
+  .lg-toc { padding: var(--space-5) var(--space-5) var(--space-4); }
+  /* Sticky at 7.5rem (.with-aside__aside): on a short laptop screen the list scrolls inside the panel
+     instead of running off the bottom of the window. */
+  .lg-toc { max-height: calc(100vh - 8.5rem); max-height: calc(100dvh - 8.5rem); overflow-y: auto; overscroll-behavior: contain; }
+}
