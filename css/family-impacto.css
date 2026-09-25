@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Fundación Un Lugar — family 03, Impacto y transparencia (prefix im-)
+   Loaded after tokens.css, styles.css and pages.css on this family's pages.
+   Tokens only, mobile-first, the same breakpoints as pages.css (40em, 48em, 64em).
+   ========================================================================== */
+
+/* ---------- SDG list (/objetivos/) ----------
+   Each goal: the UN icon (decorative; square and unaltered, so no radius), the
+   goal's number and name as text, and the 2030 target where the foundation
+   names one. Rows keep a hairline between them, as the other lists do. */
+.im-sdgs { display: grid; column-gap: var(--grid-gap); border-top: 1px solid var(--color-rule); }
+.im-sdg {
+  display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: var(--space-4); align-items: start;
+  padding-block: var(--space-5); border-bottom: 1px solid var(--color-rule);
+}
+.im-sdg img { width: 4.5rem; height: 4.5rem; }
+.im-sdg h3 { margin-bottom: var(--space-2); }
+.im-sdg__num {
+  display: block; margin-bottom: var(--space-1);
+  font-size: var(--fs-eyebrow); font-weight: 600; letter-spacing: var(--tracking-eyebrow); line-height: 1.4;
+  text-transform: uppercase; color: var(--blue-600);
+}
+.im-sdg p { margin: 0; font-size: var(--fs-small); line-height: 1.6; }
+
+/* ---------- A subheading that follows a list inside a section (/objetivos/, "Cómo las abordamos") ---------- */
+.im-subhead { margin-top: var(--space-7); }
+
+/* ---------- Document titles: a 44 px target even when the title fits on one line ----------
+   (.doc__title a in pages.css is about 32 px tall on one line; see the handoff.) */
+.doc__title .im-doc-link { display: inline-flex; align-items: center; min-height: var(--target-min); }
+
+@media (min-width: 48em) { /* 768 px */
+  .im-sdgs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .im-sdg { grid-template-columns: 5.5rem minmax(0, 1fr); gap: var(--space-5); }
+  .im-sdg img { width: 5.5rem; height: 5.5rem; }
+}
