@@ -4,8 +4,8 @@
    Iteration 3 (2026-09-24): editorial layout on a 12-column grid (from 1024 px),
    larger type, fewer boxes (hairlines instead of cards), quieter preview
    badges, one brand-blue band (results), a swipeable program row on phones,
-   and the 3D paint splash in the hero (js/splash3d.js) with the SVG splash as
-   its fallback. Navy stays in the footer only.
+   and the SVG paint splash in the hero (the 3D version was removed on
+   2026-09-25 at the owner's request). Navy stays in the footer only.
    ========================================================================== */
 
 /* ---------- Base ---------- */
@@ -173,14 +173,10 @@ strong { font-weight: 600; }
 .hero__paths ul { display: flex; flex-wrap: wrap; column-gap: var(--space-5); }
 .hero__paths .link-arrow { font-size: 0.9375rem; }
 
-/* Paint splash — Brand Guide §7, one per page. The SVG is the fallback; js/splash3d.js
-   inserts a <canvas class="splash-3d"> and adds .has-splash3d once WebGL has drawn. */
+/* Paint splash — Brand Guide §7, one per page: an original SVG shape in blue-600 around the
+   photo's top-right corner. (The 3D version was removed on 2026-09-25.) */
 .hero__visual { position: relative; isolation: isolate; padding: 14% 12% 0 0; }   /* room above and to the right of the photo for the splash */
-.splash { position: absolute; z-index: 0; top: 0; right: 0; width: 58%; color: var(--blue-600); pointer-events: none; transition: opacity 700ms ease; }
-.splash-3d { position: absolute; z-index: 0; top: -15%; right: -28%; width: 80%;   /* centred on the photo's top-right corner; the hero clips what bleeds off-screen */
-  height: auto; aspect-ratio: 1 / 1; pointer-events: none; opacity: 0; transition: opacity 1200ms ease; }
-.hero__visual.has-splash3d .splash-3d { opacity: 1; }
-.hero__visual.has-splash3d .splash { opacity: 0; }
+.splash { position: absolute; z-index: 0; top: 0; right: 0; width: 58%; color: var(--blue-600); pointer-events: none; }
 .hero__media { position: relative; z-index: 1; margin: 0; border-radius: var(--radius-media); overflow: hidden; background: var(--blue-050); box-shadow: var(--shadow-media); }
 .hero__media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 42% center; }   /* keeps the three children centred in the portrait crop */
 
@@ -402,7 +398,6 @@ strong { font-weight: 600; }
   .hero__content { grid-column: 1 / span 7; }
   .hero__visual { grid-column: 8 / span 5; max-width: none; margin: 0; padding: 16% 14% 0 0; }
   .splash { width: 62%; top: 0; right: -4%; }
-  .splash-3d { width: 88%; top: -18%; right: -28%; }
   .hero__media img { aspect-ratio: 4 / 5; }
 
   .head-split { align-items: end; }

@@ -5,7 +5,6 @@ Plain static HTML/CSS/JS, no build step.
 - `index.html`: the homepage (hero, "Lo que protege a un niño", programs, 2023 results, testimony, allies, sponsorship, "Hay un lugar para ti", header and footer). Copy sources are noted in HTML comments per section, and the full copy with source keys is in `../brand/HOMEPAGE_COPY_v3.md`.
 - `css/tokens.css` holds the design tokens (Brand Guide v0.1, with the iteration-3 type scale, grid and radii). `css/styles.css` holds the mobile-first styles.
 - `js/main.js`: mobile nav, submenu disclosure, click-to-play video, the swipeable program row on phones, current year.
-- `js/splash3d.js`: "la mancha viva", the 3D paint splash in the hero (see below).
 - `assets/`: images copied from `inventory/assets/` (provenance in `assets/README.md`).
 - `_screenshots/` (git-ignored): the current renders, `iteration-1/` and `iteration-2/` (earlier renders), the before/after comparisons, and `_tools/` (wrapper pages for the automated checks, plus `linkcheck.txt`).
 
@@ -43,16 +42,9 @@ python3 -m http.server 8000
 
 Then open <http://localhost:8000/>. The page carries `noindex` and a preview banner.
 
-## The 3D splash (iteration 3)
+## Paint splash
 
-`js/splash3d.js` draws a slowly moving 3D paint blob in brand blue behind the hero photo. It uses one WebGL fragment shader (a raymarched signed-distance blob) and no library: 13.5 KB, 5 KB gzipped.
-
-- The SVG splash in `index.html` is the fallback. It stays visible until the first WebGL frame has rendered, and it comes back if anything fails (no WebGL, shader error, lost context).
-- The 3D is skipped for `prefers-reduced-motion`, Save-Data, and software-only WebGL (`failIfMajorPerformanceCaveat`).
-- It starts after `load` plus browser idle, pauses off-screen and in hidden tabs, lowers its resolution and then freezes on slow devices, and caps the pixel ratio at 2.
-- The canvas is `aria-hidden`, ignores the pointer and sits behind the photograph. It never touches a photo of a child.
-- The current state is exposed as `data-splash3d` on `.hero__visual` (`waiting`, `running`, `frozen`, `fallback:…`).
-- Test hooks: `?no3d` forces the fallback. `?force3d` allows software WebGL so headless Chrome can render it.
+The hero's paint splash is the SVG in `index.html` (Brand Guide §7, one per page). The moving 3D version ("la mancha viva", `js/splash3d.js`) was removed on 2026-09-25 at the owner's request ("No, I don't like the 3d backdrop!"). It remains in the history on branch `iteration-3` (commit `f19520c`).
 
 ## Re-run the checks (headless Chrome)
 
@@ -60,11 +52,10 @@ With the server running, the pages in `_screenshots/_tools/` do the checks:
 
 - `wrap-360.html`, `wrap-768.html`, `wrap-1280.html`: a full-page render. The black bar reports scroll width against viewport width, any element wider than the viewport (content clipped on purpose, such as the program row and the hero splash, is ignored) and the 3D state. Add `?part=N` to show only the Nth 7000 px slice.
 - `test-360.html`, `test-1280.html`: structure and interaction checks. They cover one h1, heading order, alt text, forbidden links, 44 px targets, gold buttons, the help-line links, the program row role, the menu, the submenu and Escape, the video, the footer shape, and (after about 6 s) the 3D state and the LCP element.
-- `hero-360.html`, `hero-1280.html`: the first screen only, with `?mode=3d` (default), `?mode=no3d`, or `?mode=blocked` (splash3d.js replaced by a missing file).
+- `hero-360.html`, `hero-1280.html`: the first screen only.
 - `state-360.html`, `state-1280.html`: the open menu and the open submenu.
 
 Headless Chrome on this Mac (updated 2026-09-24):
-- Pass `--use-angle=swiftshader --enable-unsafe-swiftshader` so WebGL renders.
 - Pass `--virtual-time-budget=16000` or more so the wrapper timers run before the capture.
 - Pass `--incognito` so edited pages are never served from Chrome's cache.
 - Pass `--force-prefers-reduced-motion` to test the reduced-motion fallback.
