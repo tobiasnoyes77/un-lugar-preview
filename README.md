@@ -50,19 +50,21 @@ Headless Chrome on this Mac: `run.py` already passes `--incognito`, `--virtual-t
 
 ## Branches and the review URL
 
-- `main` = iteration 2, published at <https://tobiasnoyes77.github.io/un-lugar-preview/> (GitHub Pages from the public repo `tobiasnoyes77/un-lugar-preview`). Unlisted and `noindex`, but not access-controlled.
-- `pages/integration` (worktree `../worktrees/integration/`) = the whole site: `pages-base` plus the five family branches `pages/01-programas` … `pages/05-legal`, merged on 2026-09-25. **Local only, not pushed.**
+- `main` = the whole site, published at <https://tobiasnoyes77.github.io/un-lugar-preview/> (GitHub Pages from the public repo `tobiasnoyes77/un-lugar-preview`). Unlisted and `noindex`, but not access-controlled. It was moved to `pages/integration` and pushed on 2026-09-25, at the owner's request. Iteration 2, the version published before, is commit `a5614f7`.
+- `pages/integration` (worktree `../worktrees/integration/`) = the whole site: `pages-base` plus the five family branches `pages/01-programas` … `pages/05-legal`, merged on 2026-09-25. Work happens here; publishing moves `main` to it.
 - `pages-base` = iteration 3 without the 3D splash, plus the interior-page base. `iteration-3` (`f19520c`) is the historical record with the 3D splash. `iteration-2-3d` (checked out in `site/`) was rejected; don't use it for review.
 
 Use the Command Line Tools git (`/usr/bin/git` is blocked by the Xcode licence on this Mac):
 
 ```
 export PATH=/Library/Developer/CommandLineTools/usr/bin:$PATH
-# publish only after the owner's go-ahead (the repository is public, and no child photo has recorded consent):
-# git -C site checkout main && git -C site merge pages/integration && git -C site push
+# publish only after the owner's go-ahead (the repository is public, and no child photo has recorded consent).
+# No checkout, so site/ is never touched; the first command refuses anything but a fast-forward:
+git -C worktrees/integration fetch . pages/integration:main
+git -C worktrees/integration push origin main
 ```
 
-The page is live about 30 s after a push. To take the preview down: `gh repo delete tobiasnoyes77/un-lugar-preview`.
+The page is live about a minute after a push. To take the preview down: `gh repo delete tobiasnoyes77/un-lugar-preview`.
 
 Keep the family worktrees until the owner approves. Cleanup: `git -C site worktree remove ../worktrees/<NN-id>` and `git -C site branch -d pages/<NN-id>`.
 
@@ -81,4 +83,4 @@ The owner asked for a redo: copy that tells the story, a more professional look,
 6. how sponsorship works
 7. "Hay un lugar para ti" for families, volunteers and companies
 
-The design uses a 12-column grid, a larger and tighter type scale, and hairlines instead of repeated cards. There is one brand-blue results band, the preview badges are quieter, the header is sticky, and on phones the program row can be swiped. Iteration 2 (owner: "dark and gloomy" → brighter; lighter gold, green-shirts hero photo, simplified footer) is kept on `main`.
+The design uses a 12-column grid, a larger and tighter type scale, and hairlines instead of repeated cards. There is one brand-blue results band, the preview badges are quieter, the header is sticky, and on phones the program row can be swiped. Iteration 2 (owner: "dark and gloomy" → brighter; lighter gold, green-shirts hero photo, simplified footer) remains in the history at commit `a5614f7`.
