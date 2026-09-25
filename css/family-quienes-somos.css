@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Fundación Un Lugar — page family 04 "Quiénes somos" (prefix qs-)
+   Only what css/pages.css and css/styles.css do not cover. Tokens only,
+   mobile-first, the same breakpoints as the shared files (40em, 48em, 64em).
+   ========================================================================== */
+
+/* ---------- Four link cards in one row on desktop (the group landing has four pages) ---------- */
+@media (min-width: 64em) {
+  .link-grid.qs-link-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* ---------- Two groups inside one section band (Nuestro equipo: Dirección, Programas y proyectos) ---------- */
+.qs-group + .qs-group { margin-top: var(--space-8); }
+.qs-group > h2 { margin-bottom: var(--space-6); }
+.qs-space-top { margin-top: var(--space-8); }   /* modifier for a shared block that follows the groups */
+
+/* ---------- Heading beside its content on desktop (Nuestro objetivo: "Por qué es urgente", "Dónde trabajamos") ----------
+   Phones and tablets: stacked, as .section-head + content. From 1024 px: heading in columns 1–5,
+   content in columns 7–12 of the 12-column grid. */
+@media (min-width: 64em) {
+  .qs-cols { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--grid-gap); align-items: start; }
+  .qs-cols__head { grid-column: 1 / span 5; }
+  .qs-cols__body { grid-column: 7 / span 6; }
+}
+
+/* ---------- Cited statements under a source (Nuestro objetivo, "Por qué es urgente") ---------- */
+.qs-cited { margin: 0; padding-left: 1.25rem; }
+.qs-cited li + li { margin-top: var(--space-3); }
+.qs-cited li::marker { color: var(--blue-600); }
+
+/* ---------- Formal statements (Misión y visión) ---------- */
+.qs-statement { padding-left: var(--space-5); border-left: 3px solid var(--blue-600); }
+.qs-statement + .qs-statement { margin-top: var(--space-8); }
+.qs-statement__text {
+  max-width: 34rem; margin-bottom: var(--space-4);
+  font-size: var(--fs-h3-lg); font-weight: 500; line-height: 1.32; letter-spacing: -0.015em;
+  color: var(--navy-700); text-wrap: pretty;
+}
+.qs-statement__note { margin: 0; }
+
+/* ---------- Organisation chart as a nested list (text, not an image) ----------
+   <ul class="qs-org"><li><p class="qs-org__node">name, role</p><ul>…</ul></li></ul>
+   Nested lists carry the hierarchy for screen readers; the lines are drawn per item
+   so the vertical line stops at the last child. Lines use blue-600 (5.2:1 on blue-050). */
+.qs-org, .qs-org ul { list-style: none; margin: 0; padding: 0; }
+.qs-org > li + li { margin-top: var(--space-3); }
+.qs-org ul { margin-left: var(--space-4); padding-left: var(--space-5); }
+.qs-org ul > li { position: relative; padding-top: var(--space-3); }
+.qs-org ul > li::before {   /* vertical line from the parent down to this item */
+  content: ""; position: absolute; left: calc(-1 * var(--space-5)); top: 0; bottom: 0;
+  border-left: 1.5px solid var(--blue-600);
+}
+.qs-org ul > li:last-child::before { bottom: auto; height: calc(var(--space-3) + 1.6rem); }
+.qs-org ul > li::after {    /* horizontal connector to the box */
+  content: ""; position: absolute; left: calc(-1 * var(--space-5)); top: calc(var(--space-3) + 1.6rem);
+  width: calc(var(--space-5) - var(--space-1)); border-top: 1.5px solid var(--blue-600);
+}
+.qs-org__node {
+  display: inline-flex; flex-direction: column; gap: 0.1rem; margin: 0; min-width: 13rem; max-width: 100%;
+  padding: var(--space-3) var(--space-4); background: var(--white); border-radius: var(--radius-sm); box-shadow: var(--shadow-card);
+}
+.qs-org__name { font-weight: 600; line-height: 1.35; color: var(--navy-700); }
+.qs-org__role { font-size: var(--fs-small); line-height: 1.4; color: var(--grey-700); }
+.qs-org__node--lead { background: var(--blue-600); }
+.qs-org__node--lead .qs-org__name, .qs-org__node--lead .qs-org__role { color: var(--white); }
+.qs-org__heading { margin: 0 0 var(--space-4); }
+.qs-org-side { margin-bottom: var(--space-7); }   /* the people with no line: after the tree on phones, top of the side column on desktop (as on the chart) */
+
+/* ---------- Long e-mail addresses may wrap anywhere (360 px) ---------- */
+.qs-break { overflow-wrap: anywhere; }
