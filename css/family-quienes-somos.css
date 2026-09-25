@@ -9,6 +9,10 @@
   .link-grid.qs-link-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
+/* ---------- Photo crop: keep the upper part of a portrait photo in the 4:3 frame
+   (Quiénes somos intro: the children with the young people and adults behind them) ---------- */
+.qs-media--top .media__frame img { object-position: 50% 15%; }
+
 /* ---------- Two groups inside one section band (Nuestro equipo: Dirección, Programas y proyectos) ---------- */
 .qs-group + .qs-group { margin-top: var(--space-8); }
 .qs-group > h2 { margin-bottom: var(--space-6); }
