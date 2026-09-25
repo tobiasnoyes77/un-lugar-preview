@@ -39,8 +39,9 @@
   <!-- ===================================================================
        Header — Brand Guide v0.1 §8; SITE_ARCHITECTURE.md (nav order);
        Educarte inside "Nuestro trabajo" and footer (guide §10, adopted).
-       Group landings (/quienes-somos/, /nuestro-trabajo/) do not exist yet,
-       so the two group items are disclosure buttons, not links.
+       The same header as _templates/page.html, with paths from the root.
+       The group items stay disclosure buttons; each submenu starts with
+       the group's landing page (/quienes-somos/, /nuestro-trabajo/).
        Iteration 3: the header sticks to the top so "Dona" stays in reach.
        =================================================================== -->
   <header class="site-header">
@@ -57,10 +58,11 @@
               <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
             </button>
             <ul class="nav__sub" id="sub-quienes">
-              <li><a href="https://fundacionunlugar.com/nuestro-objetivo/">Nuestro objetivo</a></li>
-              <li><a href="https://fundacionunlugar.com/mision-y-vision/">Misión y visión</a></li>
-              <li><a href="https://fundacionunlugar.com/nuestro-equipo/">Nuestro equipo</a></li>
-              <li><a href="https://fundacionunlugar.com/organigrama/">Organigrama</a></li>
+              <li><a href="quienes-somos/">Conoce la fundación</a></li>
+              <li><a href="nuestro-objetivo/">Nuestro objetivo</a></li>
+              <li><a href="mision-y-vision/">Misión y visión</a></li>
+              <li><a href="nuestro-equipo/">Nuestro equipo</a></li>
+              <li><a href="organigrama/">Organigrama</a></li>
             </ul>
           </li>
           <li class="nav__item nav__item--has-sub">
@@ -69,24 +71,25 @@
               <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
             </button>
             <ul class="nav__sub" id="sub-trabajo">
-              <li><a href="https://fundacionunlugar.com/programas-08/">Nuestros programas</a></li>
-              <li><a href="https://fundacionunlugar.com/efecto/">Efectos de nuestros programas</a></li>
-              <li><a href="https://fundacionunlugar.com/objetivos/">Nuestro aporte a los ODS</a></li>
-              <li><a href="https://fundacionunlugar.com/agenda-de-desarrollo-nacional/">Nuestro aporte a la agenda de desarrollo nacional</a></li>
-              <li><a href="https://fundacionunlugar.com/boletines/">Boletines de gestión</a></li>
-              <li><a href="https://fundacionunlugar.com/certificado-de-trayectoria/">Certificado de trayectoria</a></li>
+              <li><a href="nuestro-trabajo/">Conoce nuestro trabajo</a></li>
+              <li><a href="programas-08/">Nuestros programas</a></li>
+              <li><a href="efecto/">Efectos de nuestros programas</a></li>
+              <li><a href="objetivos/">Nuestro aporte a los ODS</a></li>
+              <li><a href="agenda-de-desarrollo-nacional/">Nuestro aporte a la agenda de desarrollo nacional</a></li>
+              <li><a href="boletines/">Boletines de gestión</a></li>
+              <li><a href="certificado-de-trayectoria/">Certificado de trayectoria</a></li>
               <li><a href="https://educarte.info/" target="_blank" rel="noopener">Educarte, formación en línea<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(se abre en una pestaña nueva)</span></a></li>
             </ul>
           </li>
-          <li class="nav__item"><a class="nav__link" href="https://fundacionunlugar.com/reconocimientos/">Reconocimientos</a></li>
+          <li class="nav__item"><a class="nav__link" href="reconocimientos/">Reconocimientos</a></li>
           <li class="nav__item"><a class="nav__link" href="https://fundacionunlugar.com/tienda/">Tienda</a></li>
-          <li class="nav__item"><a class="nav__link" href="https://fundacionunlugar.com/ways-to-help/">Ayuda</a></li>
-          <li class="nav__item nav__cta"><a class="btn btn--donate btn--block" href="https://fundacionunlugar.com/dona/">Dona</a></li>
+          <li class="nav__item"><a class="nav__link" href="ways-to-help/">Ayuda</a></li>
+          <li class="nav__item nav__cta"><a class="btn btn--donate btn--block" href="dona/">Dona</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn--donate" href="https://fundacionunlugar.com/dona/">Dona</a>
+        <a class="btn btn--donate" href="dona/">Dona</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
           <svg class="icon icon--menu" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
           <svg class="icon icon--close" aria-hidden="true" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
@@ -114,16 +117,16 @@
           <h1 class="hero__title" id="hero-title">Un lugar para crecer con <span class="hl">salud mental</span>.</h1>
           <p class="hero__lead">Acompañamos a niños, niñas y adolescentes de Patio Bonito, y a sus familias, para prevenir la depresión y el suicidio. Lo hacemos con formación, atención psicosocial y alimentación.</p>
           <div class="hero__actions">
-            <a class="btn btn--donate btn--lg" href="https://fundacionunlugar.com/apadrinar/">Apadrina a un niño · $45.000 al mes</a>
-            <a class="link-arrow" href="https://fundacionunlugar.com/dona/">Haz una donación única</a>
+            <a class="btn btn--donate btn--lg" href="apadrinar/">Apadrina a un niño · $45.000 al mes</a>
+            <a class="link-arrow" href="dona/">Haz una donación única</a>
           </div>
           <p class="hero__note"><span>Equivale a $1.500 al día. Pago en línea seguro.</span> <span class="badge badge--verify">monto por confirmar</span></p>
           <div class="hero__paths">
             <p class="hero__paths-label">¿Buscas otra cosa?</p>
             <ul role="list">
-              <li><a class="link-arrow" href="https://fundacionunlugar.com/inscribete-programas/">Inscribir a mi hijo o hija</a></li>
-              <li><a class="link-arrow" href="https://fundacionunlugar.com/voluntariado/">Ser voluntario</a></li>
-              <li><a class="link-arrow" href="https://fundacionunlugar.com/patrocinar-causas/">Patrocinar como empresa</a></li>
+              <li><a class="link-arrow" href="inscribete-programas/">Inscribir a mi hijo o hija</a></li>
+              <li><a class="link-arrow" href="voluntariado/">Ser voluntario</a></li>
+              <li><a class="link-arrow" href="patrocinar-causas/">Patrocinar como empresa</a></li>
             </ul>
           </div>
         </div>
@@ -162,7 +165,7 @@
           <p class="eyebrow">Cómo trabajamos</p>
           <h2 id="protege-title">Lo que protege a un niño</h2>
           <p class="lead">Un propósito, alguien que lo escuche y comida en la mesa. Esas tres cosas cuidan la salud mental de un niño, y sobre ellas construimos nuestro trabajo.</p>
-          <p class="protege__link"><a class="link-arrow" href="https://fundacionunlugar.com/nuestro-objetivo/">Conoce nuestro objetivo</a></p>
+          <p class="protege__link"><a class="link-arrow" href="nuestro-objetivo/">Conoce nuestro objetivo</a></p>
         </div>
         <figure class="protege__media reveal">
           <img src="assets/photos/IMG_3829-scaled.jpeg"
@@ -232,7 +235,7 @@
               <h3>Alimentarte</h3>
               <p class="program__tagline">Alimenta tu cuerpo, nutre tu mente</p>
               <p>Lácteos, verduras y proteínas cada semana para familias que ganan hasta un salario mínimo, con capacitación en habilidades para la vida.</p>
-              <a class="link-arrow" href="https://fundacionunlugar.com/alimentarte/">Conoce el programa<span class="visually-hidden"> Alimentarte</span></a>
+              <a class="link-arrow" href="alimentarte/">Conoce el programa<span class="visually-hidden"> Alimentarte</span></a>
             </li>
             <li class="program">
               <figure class="program__media">
@@ -242,7 +245,7 @@
               <h3>Formarte</h3>
               <p class="program__tagline">Formación integral para futuros brillantes</p>
               <p>Fútbol, danza y arte cada sábado para desarrollar talentos, hábitos y un proyecto de vida.</p>
-              <a class="link-arrow" href="https://fundacionunlugar.com/formate/">Conoce el programa<span class="visually-hidden"> Formarte</span></a>
+              <a class="link-arrow" href="formate/">Conoce el programa<span class="visually-hidden"> Formarte</span></a>
             </li>
             <li class="program">
               <figure class="program__media">
@@ -252,7 +255,7 @@
               <h3>Educarte</h3>
               <p class="program__tagline">Capacitación para familias y jóvenes</p>
               <p>Formación para familias, voluntarios y adolescentes en temas psicosociales, prevención del abuso y herramientas para la vida, con apoyo de la tecnología.</p>
-              <a class="link-arrow" href="https://fundacionunlugar.com/capacitarte/">Conoce el programa<span class="visually-hidden"> Educarte</span></a>
+              <a class="link-arrow" href="capacitarte/">Conoce el programa<span class="visually-hidden"> Educarte</span></a>
             </li>
             <li class="program">
               <figure class="program__media">
@@ -262,7 +265,7 @@
               <h3>Bienestar infantil</h3>
               <p class="program__tagline">Recreación y bienestar como derecho</p>
               <p>Acceso a parques, entretenimiento y espacios culturales, porque jugar y descubrir también cuidan la salud mental.</p>
-              <a class="link-arrow" href="https://fundacionunlugar.com/bienestar-infantil/">Conoce el programa<span class="visually-hidden"> Bienestar infantil</span></a>
+              <a class="link-arrow" href="bienestar-infantil/">Conoce el programa<span class="visually-hidden"> Bienestar infantil</span></a>
             </li>
             <li class="program">
               <figure class="program__media">
@@ -272,7 +275,7 @@
               <h3>Dignificarte</h3>
               <p class="program__tagline">Dignificación como catalizador del éxito</p>
               <p>Artículos para el hogar, brigadas de salud y convenios que mejoran la calidad de vida de las familias.</p>
-              <a class="link-arrow" href="https://fundacionunlugar.com/cuidarte/">Conoce el programa<span class="visually-hidden"> Dignificarte</span></a>
+              <a class="link-arrow" href="cuidarte/">Conoce el programa<span class="visually-hidden"> Dignificarte</span></a>
             </li>
             <li class="program">
               <figure class="program__media">
@@ -282,12 +285,12 @@
               <h3>Tu mente tu aliada</h3>
               <p class="program__tagline">Atención psicológica y social</p>
               <p>Atención psicológica y social en salud mental y emocional, para que niños, niñas y adolescentes desarrollen de forma sana su personalidad y su autoestima.</p>
-              <a class="link-arrow" href="https://fundacionunlugar.com/abrigarte/">Conoce el programa<span class="visually-hidden"> Tu mente tu aliada</span></a>
+              <a class="link-arrow" href="abrigarte/">Conoce el programa<span class="visually-hidden"> Tu mente tu aliada</span></a>
             </li>
           </ul>
         </div>
         <p class="programs-hint" aria-hidden="true">Desliza para ver los seis programas →</p>
-        <p class="section-foot"><a class="btn btn--secondary" href="https://fundacionunlugar.com/programas-08/">Ver todos los programas</a></p>
+        <p class="section-foot"><a class="btn btn--secondary" href="programas-08/">Ver todos los programas</a></p>
       </div>
     </section>
 
@@ -326,7 +329,7 @@
             <span class="badge badge--year">2023</span>
           </li>
         </ul>
-        <p class="section-foot"><a class="link-arrow" href="https://fundacionunlugar.com/efecto/">Ver los doce resultados de 2023</a></p>
+        <p class="section-foot"><a class="link-arrow" href="efecto/#resultados">Ver los doce resultados de 2023</a></p>
       </div>
     </section>
 
@@ -401,7 +404,7 @@
               <p><strong>Premio Conquista Social 2024</strong> <span class="badge badge--verify">por confirmar</span><br><a href="https://www.instagram.com/reel/DCkxSAWJh1F/" target="_blank" rel="noopener">Ver la publicación en Instagram<span class="visually-hidden"> (pestaña nueva)</span></a></p>
             </li>
           </ul>
-          <p class="allies__link"><a class="link-arrow" href="https://fundacionunlugar.com/reconocimientos/">Ver todos los reconocimientos</a></p>
+          <p class="allies__link"><a class="link-arrow" href="reconocimientos/">Ver todos los reconocimientos</a></p>
         </div>
       </div>
     </section>
@@ -419,8 +422,8 @@
           <h2 id="sponsor-title">Dale a un niño un lugar donde crecer</h2>
           <p class="lead">Con $45.000 al mes (es decir, $1.500 al día) apoyas la formación, la alimentación y el acompañamiento de tu ahijado. <span class="badge badge--verify">monto por confirmar</span></p>
           <div class="sponsor__actions">
-            <a class="btn btn--primary btn--lg" href="https://fundacionunlugar.com/apadrinar/">Apadrina a un niño</a>
-            <a class="link-arrow" href="https://fundacionunlugar.com/dona/">Prefiero hacer una donación única</a>
+            <a class="btn btn--primary btn--lg" href="apadrinar/">Apadrina a un niño</a>
+            <a class="link-arrow" href="dona/">Prefiero hacer una donación única</a>
           </div>
           <p class="small text-muted">Para que tu donación quede registrada a tu nombre, envía el comprobante a <a href="mailto:donaciones@fundacionunlugar.com">donaciones@fundacionunlugar.com</a>.</p>
         </div>
@@ -479,7 +482,7 @@
             <p>Clases de fútbol, danza y arte los sábados para niños, niñas y adolescentes de 9 a 18 años. Los programas son para familias de la comunidad que acompaña la fundación. <span class="badge badge--verify">horario por confirmar</span></p>
             <div class="door__actions">
               <a class="btn btn--secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSeCDr8CuEnLXbuR0zRH3iXmYmvRIH39ScYODW0EZLhKXya0WQ/viewform" target="_blank" rel="noopener">Inscríbete<span class="visually-hidden"> (formulario de Google, se abre en una pestaña nueva)</span></a>
-              <a class="link-arrow" href="https://fundacionunlugar.com/inscribete-programas/">Ver horarios</a>
+              <a class="link-arrow" href="inscribete-programas/">Ver horarios</a>
             </div>
           </li>
           <li class="door reveal">
@@ -488,7 +491,7 @@
             <h3>Sé voluntario</h3>
             <p>Aporta tu tiempo y tu talento en Patio Bonito. Necesitas ser mayor de edad, tener disponibilidad los fines de semana y contar con seguro médico.</p>
             <div class="door__actions">
-              <a class="btn btn--secondary" href="https://fundacionunlugar.com/voluntariado/">Quiero ser voluntario</a>
+              <a class="btn btn--secondary" href="voluntariado/">Quiero ser voluntario</a>
             </div>
           </li>
           <li class="door reveal">
@@ -497,7 +500,7 @@
             <h3>Patrocina un programa</h3>
             <p>Con $300.000 al mes tu empresa patrocina uno de nuestros programas y recibe cada trimestre un informe con cifras de impacto. <span class="badge badge--verify">monto por confirmar</span></p>
             <div class="door__actions">
-              <a class="btn btn--secondary" href="https://fundacionunlugar.com/patrocinar-causas/">Patrocinar un programa</a>
+              <a class="btn btn--secondary" href="patrocinar-causas/">Patrocinar un programa</a>
             </div>
           </li>
         </ul>
@@ -563,26 +566,26 @@
             <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Calle+6+%23+88G-11%2C+Bogot%C3%A1" target="_blank" rel="noopener">Calle 6 # 88G-11, Bogotá<span class="visually-hidden"> (Google Maps, pestaña nueva)</span></a> <span class="badge badge--verify">dirección por confirmar</span></li>
             <li><a href="https://wa.me/573052018095" target="_blank" rel="noopener">WhatsApp +57 305 201 8095<span class="visually-hidden"> (pestaña nueva)</span></a></li>
             <li><a href="https://wa.me/573004915347" target="_blank" rel="noopener">WhatsApp +57 300 491 5347<span class="visually-hidden"> (pestaña nueva)</span></a></li>
-            <li><a href="mailto:relacionespublicas@fundacionunlugar.com">relacionespublicas@fundacionunlugar.com</a></li>
-            <li><a href="mailto:donaciones@fundacionunlugar.com">donaciones@fundacionunlugar.com</a></li>
+            <li><a href="mailto:relacionespublicas@fundacionunlugar.com">relacionespublicas@<wbr>fundacionunlugar.com</a></li>
+            <li><a href="mailto:donaciones@fundacionunlugar.com">donaciones@<wbr>fundacionunlugar.com</a></li>
           </ul>
         </div>
 
         <div>
           <h3>Transparencia</h3>
           <ul class="footer__list">
-            <li><a href="https://fundacionunlugar.com/wp-content/uploads/2023/12/1.-INFORME-GESTIO%CC%80N-SOCIAL-2022.pdf" target="_blank" rel="noopener">Informe de gestión social 2022 (PDF, 14 MB)</a></li>
-            <li><a href="https://fundacionunlugar.com/wp-content/uploads/2024/03/Certificado-de-trayectoria-trabajo-social-2024-2.pdf" target="_blank" rel="noopener">Certificado de trayectoria 2024 (PDF)</a></li>
-            <li><a href="https://fundacionunlugar.com/wp-content/uploads/2023/12/2.-RUT-FUNDACION-COMPLETO-Regimen-especial.pdf" target="_blank" rel="noopener">RUT – régimen tributario especial (PDF)</a></li>
-            <li><a href="https://fundacionunlugar.com/terminos-y-condiciones/">Términos y condiciones</a></li>
-            <li><a href="https://fundacionunlugar.com/tratamiento-de-datos/">Tratamiento de datos personales</a></li>
+            <li><a href="https://fundacionunlugar.com/wp-content/uploads/2023/12/1.-INFORME-GESTIO%CC%80N-SOCIAL-2022.pdf" target="_blank" rel="noopener">Informe de gestión social 2022 (PDF)<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a></li>
+            <li><a href="https://fundacionunlugar.com/wp-content/uploads/2024/03/Certificado-de-trayectoria-trabajo-social-2024-2.pdf" target="_blank" rel="noopener">Certificado de trayectoria 2024 (PDF)<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a></li>
+            <li><a href="https://fundacionunlugar.com/wp-content/uploads/2023/12/2.-RUT-FUNDACION-COMPLETO-Regimen-especial.pdf" target="_blank" rel="noopener">RUT – régimen tributario especial (PDF)<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a></li>
+            <li><a href="terminos-y-condiciones/">Términos y condiciones</a></li>
+            <li><a href="tratamiento-de-datos/">Tratamiento de datos personales</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer__bottom">
         <span>© <span id="anio-actual">2026</span> Fundación Un Lugar Donde Puedes Crecer. Todos los derechos reservados.</span>
-        <span><a href="https://fundacionunlugar.com/contacto/">Contacto</a> · <a href="#inicio">Volver arriba</a></span>
+        <span><a href="contacto/">Contacto</a> · <a href="#inicio">Volver arriba</a></span>
       </div>
     </div>
   </footer>

@@ -41,3 +41,42 @@ photo from the current homepage) and `program-graphics/8.jpg` (Dignificarte → 
 replaced tiles still exist in `inventory/assets/program-graphics/` and can come back if the owner prefers topical fit over light;
 `8.png` (haircut brigade) is the most literal Dignificarte image. `1-3` (Alimentarte) was kept: it is bright, but it remains a
 close-up portrait — swap is an open question for the review round.
+
+## Interior pages (page-family rollout, merged 2026-09-25)
+
+Added by the five page families (`handoff/01…05`). Same processing: Pillow LANCZOS, EXIF orientation applied, longest edge
+1600 px with an 800 px-wide `-w800` variant, JPEG quality 80, progressive, **all metadata dropped** (the live originals of
+`IMG_1929`, `IMG_3350` and `IMG_3815` carry GPS coordinates; an EXIF scan of all 43 images here found none). No crop or
+retouching; framings (4:3, 4:5, `object-position`) are CSS. At integration the two identical copies of `IMG_1929`
+(families 02 and 04) became one file in `photos/`.
+
+| File in `site/assets/` | Source URL | Used on | Shows children | Consent recorded |
+|---|---|---|---|---|
+| `photos/IMG_1929.jpg` (1200 × 1600) + `-w800` | https://fundacionunlugar.com/wp-content/uploads/2025/09/IMG_1929.jpg (live `/nuestro-objetivo/`) | `/nuestro-objetivo/` intro (4:5); `/dona/` intro; `/ways-to-help/` donation card | yes — badge | **no** |
+| `pages/programas/8.jpg` (480 × 480, source size) | https://fundacionunlugar.com/wp-content/uploads/2024/03/8.png (live `/programas-08/`, `/dignificarte/`) | `/cuidarte/` intro (haircut brigade) | yes (one boy) — badge | **no** |
+| `pages/ayuda/IMG_3333-scaled.jpeg` (1200 × 1600) + `-w800` | https://fundacionunlugar.com/wp-content/uploads/2025/08/IMG_3333-scaled.jpeg (live `/ways-to-help/`) | `/voluntariado/` intro and `og:image`; `/ways-to-help/` volunteering card | no (volunteer shirt, face out of frame) | n/a |
+| `pages/ayuda/IMG_3350-1-scaled.jpg` (1200 × 1600) + `-w800` | https://fundacionunlugar.com/wp-content/uploads/2025/09/IMG_3350-1-scaled.jpg (live `/ways-to-help/`) | `/voluntariado/` photo beside the requirements | yes — badge | **no** |
+| `pages/ayuda/IMG_1790-scaled.jpeg` (1200 × 1600) + `-w800` | https://fundacionunlugar.com/wp-content/uploads/2025/08/IMG_1790-scaled.jpeg (live `/ways-to-help/`, `/agenda-de-desarrollo-nacional/`) | `/patrocinar-causas/` intro; `/ways-to-help/` company card | yes (adolescents) — badge | **no** |
+| `pages/impacto/IMG_1015-scaled.jpeg` (1600 × 1200) + `-w800` | https://fundacionunlugar.com/wp-content/uploads/2025/08/IMG_1015-scaled.jpeg (live homepage, `/certificado-de-trayectoria/`) | `/nuestro-trabajo/` intro | yes — badge | **no** |
+| `pages/impacto/IMG_3350.jpg` (1200 × 1600) + `-w800` | https://fundacionunlugar.com/wp-content/uploads/2025/09/IMG_3350.jpg (live `/efecto/`; the iteration-1 hero) | `/efecto/` intro (4:5) | yes — badge | **no** |
+| `pages/impacto/ods-01.png`, `ods-02`, `ods-03`, `ods-04`, `ods-08`, `ods-10`, `ods-13` (≈133 px squares) | https://fundacionunlugar.com/wp-content/uploads/2024/03/Captura-de-Pantalla-2024-03-06-a-las-7.14.27-p.-m.png … `7.15.30` (live `/objetivos/`), trimmed to the icon | `/objetivos/`, decorative (`alt=""`) | no | n/a — screenshots; replace with the official UN Spanish icons before launch |
+| `pages/quienes-somos/IMG_1743-scaled.jpeg` (1200 × 1600) + `-w800` | https://fundacionunlugar.com/wp-content/uploads/2025/08/IMG_1743-scaled.jpeg (live homepage) | `/quienes-somos/` intro (4:3, upper part kept) | yes — badge | **no** |
+
+Homepage images reused on interior pages (add to their "Used for" above):
+
+| File | Also used on | Shows children | Consent recorded |
+|---|---|---|---|
+| `photos/IMG_3829-scaled.jpeg` + `-w600` | `/abrigarte/` intro; `/apadrinar/` intro and `og:image`; `/ways-to-help/` sponsorship card; `/gracias/` intro | hands only | n/a |
+| `program-graphics/12.jpg` | `/programas-08/` Dignificarte card; **`/alimentarte/` intro** (a group at a food delivery) | yes — badge | **no** |
+| `program-graphics/1-3.jpg` | `/programas-08/` Alimentarte card | yes — badge | **no** |
+| `program-graphics/7.jpg` | `/formate/` intro; `/programas-08/` card | yes — badge | **no** |
+| `program-graphics/2-3.jpg` | `/bienestar-infantil/` intro; `/programas-08/` card | yes — badge | **no** |
+| `photos/WhatsApp-Image-2024-08-02-at-1.01.47-PM.jpeg` | `/capacitarte/` intro; `/programas-08/` card | yes — badge | **no** |
+| `photos/IMG_3815.jpeg` | `/programas-08/` Tu mente tu aliada card | yes — badge | **no** |
+
+Open for review (proposals in `PROJECT_BRIEF.md`): tile `12` stands for Dignificarte on the homepage and overview but for
+Alimentarte on `/alimentarte/`; `IMG_1929` appears on three pages and `IMG_3829` on six; the Tu mente tu aliada card shows an
+identifiable child next to psychological care. Not used on purpose (per family): stock and Canva images, schedule posters,
+screenshots of text, team portraits, the org-chart image, UNICEF/WHO and payment logos, `program-graphics/6-1.png` (medical
+setting), `IMG_0842-2` ("Go People" banner), `IMG_0767` (religious cards), `IMG_2229` (close portrait) and the 2023 bulletin
+image (names a child; linked as a document on `/boletines/`, not displayed).

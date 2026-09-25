@@ -4,10 +4,7 @@
    mobile-first, the same breakpoints as the shared files (40em, 48em, 64em).
    ========================================================================== */
 
-/* ---------- Four link cards in one row on desktop (the group landing has four pages) ---------- */
-@media (min-width: 64em) {
-  .link-grid.qs-link-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-}
+/* The four-in-a-row link grid moved to pages.css (.link-grid--4) at integration (2026-09-25). */
 
 /* ---------- Photo crop: keep the upper part of a portrait photo in the 4:3 frame
    (Quiénes somos intro: the children with the young people and adults behind them) ---------- */

@@ -95,7 +95,7 @@
 .doc { display: flex; gap: var(--space-4); align-items: flex-start; padding-block: var(--space-5); border-bottom: 1px solid var(--color-rule); }
 .doc > .icon { color: var(--blue-600); margin-top: 0.2rem; }
 .doc__title { font-size: var(--fs-h3); margin-bottom: var(--space-1); }
-.doc__title a { display: inline-block; padding-block: 0.3rem; text-decoration: none; }
+.doc__title a { display: inline-flex; align-items: center; min-height: var(--target-min); padding-block: 0.3rem; text-decoration: none; }   /* 44 px even on one line */
 .doc__title a:hover { text-decoration: underline; }
 .doc__meta { font-size: var(--fs-small); color: var(--grey-700); margin-bottom: var(--space-2); }
 .doc__body > :last-child { margin-bottom: 0; }
@@ -183,4 +183,40 @@
   .page-cta__inner { align-items: end; }
   .page-cta__inner > div:first-child { grid-column: 1 / span 7; }
   .page-cta__actions { grid-column: 9 / span 4; }
+}
+
+/* ========================================================================
+   Modifiers promoted from the page families at integration (2026-09-25).
+   They come last so they win over the base rules above, as they did when
+   they lived in the family stylesheets. Sources: handoff/01–04.
+   ======================================================================== */
+
+/* ---------- Steps on interior pages ----------
+   Steps directly under an h2 have h3 titles, sized like the homepage's h4 steps.
+   .steps--text: each step is one sentence (<p>), centred on its number circle. */
+.steps .step h3 { font-size: 1.125rem; letter-spacing: -0.006em; margin: 0.55rem 0 var(--space-1); }
+.steps--text .step p { padding-top: 0.55rem; }
+
+/* ---------- All six program cards as the page's main content (Nuestros programas) ----------
+   Stacked on phones instead of the homepage's swipeable row; the homepage grid from 768 px. */
+.programs--stack { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-7); padding-bottom: 0; }
+
+/* ---------- Photo width caps ----------
+   .media--tile: a 480 px program tile is never shown wider than its file. */
+.media.media--tile { max-width: 30rem; }
+
+/* ---------- A callout right after a list of questions ---------- */
+.faq + .callout { margin-top: var(--space-6); }
+
+@media (min-width: 48em) { /* 768 px */
+  .programs--stack { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-8) var(--grid-gap); }
+  .split > .media { max-width: 34rem; }   /* a photo beside text keeps the intro photo's tablet width */
+}
+
+@media (min-width: 64em) { /* 1024 px */
+  .programs--stack { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .split > .media { max-width: none; }
+  /* Link grids with two or four cards: no card left alone on the last row. */
+  .link-grid.link-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .link-grid.link-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
