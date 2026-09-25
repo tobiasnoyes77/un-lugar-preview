@@ -27,10 +27,10 @@ Slugs are the live site's (`inventory/SITE_ARCHITECTURE.md`; the renames there a
 
 ```
 cd "/Users/tobiasnoyes/Desktop/Fundacion Lugar"
-python3 -m http.server 8000 --directory worktrees/integration
+python3 -m http.server 8010 --directory worktrees/integration
 ```
 
-Then open <http://localhost:8000/>. Every page carries `noindex` and a preview banner, and "Ver pendientes" jumps to the page's list of items the foundation still has to confirm.
+Then open <http://localhost:8010/>. Every page carries `noindex` and a preview banner, and "Ver pendientes" jumps to the page's list of items the foundation still has to confirm.
 
 Main actions that would take a payment or a form (Quiero apadrinar, Donar en línea, Quiero ser voluntario, Patrocinar un programa) still open the **live** WordPress pages, which have returned HTTP 500 since 2026-09-24. That is expected in the preview.
 
